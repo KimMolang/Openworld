@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\00.GraphicDevice">
+      <UniqueIdentifier>{6ad414d9-3a90-41a4-a075-9e951c2de500}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Scene">
+      <UniqueIdentifier>{a67ff5dd-e9a9-4f3b-93cc-5c42497c5415}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.Object">
+      <UniqueIdentifier>{88f2bd18-a3ae-452e-a5ed-9d4e29e1f067}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Component">
+      <UniqueIdentifier>{0ecd4d90-858a-40c9-a541-e862e754ba04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Component\Resource">
+      <UniqueIdentifier>{216126be-db2b-45fe-80bc-06c393a4ecbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Component\Resource\Shader">
+      <UniqueIdentifier>{4ff332fc-1bc6-4c52-86fa-96fd0c00cc31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Component\Resource\Texture">
+      <UniqueIdentifier>{0e6812be-43fb-4430-9af7-9e442303f173}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Component\Collision">
+      <UniqueIdentifier>{4e3649a8-7aca-44db-bfdb-e434ffcd99bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\02.Layer">
+      <UniqueIdentifier>{2203f645-2fbe-4d93-92f7-214cb8cde67f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Component\Transform">
+      <UniqueIdentifier>{975c5040-0511-4608-8fc4-a43208ce73e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\99.Export">
+      <UniqueIdentifier>{8c1b2f4d-7a17-451f-8d3c-115ab2f99192}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.Object\Cameara">
+      <UniqueIdentifier>{e54b5a38-3d3c-4109-92fd-6d45bb56250f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\00. Mgr">
+      <UniqueIdentifier>{ff4e339c-0a88-437d-b184-40033aadc559}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Component\Resource\VIBuffer">
+      <UniqueIdentifier>{99b9d8d8-551b-45ff-a08b-8d2d4da74a77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Renderer">
+      <UniqueIdentifier>{02738afc-b64e-4c7b-84b7-d80b89a782f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Component\Resource\VIBuffer\Terrain">
+      <UniqueIdentifier>{bc5667ef-c2ea-4741-968a-95d24f15cc79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\98.Others">
+      <UniqueIdentifier>{cb8cf599-b075-4213-bb89-873334ab8a14}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\GraphicDevice.h">
+      <Filter>소스 파일\00.GraphicDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Scene.h">
+      <Filter>소스 파일\01.Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Layer.h">
+      <Filter>소스 파일\02.Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Object.h">
+      <Filter>소스 파일\03.Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Component.h">
+      <Filter>소스 파일\04.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Resource.h">
+      <Filter>소스 파일\04.Component\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Texture.h">
+      <Filter>소스 파일\04.Component\Resource\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Export_Function_Mgr_GraphicDevice.h">
+      <Filter>소스 파일\99.Export</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Camera.h">
+      <Filter>소스 파일\03.Object\Cameara</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\CameraDynamic.h">
+      <Filter>소스 파일\03.Object\Cameara</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\CameraNull.h">
+      <Filter>소스 파일\03.Object\Cameara</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\CameraStatic.h">
+      <Filter>소스 파일\03.Object\Cameara</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Timer.h">
+      <Filter>소스 파일\00. Mgr</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Export_Function_Mgr.h">
+      <Filter>소스 파일\99.Export</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\KeyChecker.h">
+      <Filter>소스 파일\00. Mgr</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Shader.h">
+      <Filter>소스 파일\04.Component\Resource\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\ResourceMgr.h">
+      <Filter>소스 파일\00. Mgr</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\VIBuffer.h">
+      <Filter>소스 파일\04.Component\Resource\VIBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\VIBufferCube.h">
+      <Filter>소스 파일\04.Component\Resource\VIBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\ShaderColor.h">
+      <Filter>소스 파일\04.Component\Resource\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\ObjectMgr.h">
+      <Filter>소스 파일\00. Mgr</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\SceneMgr.h">
+      <Filter>소스 파일\00. Mgr</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\SceneNull.h">
+      <Filter>소스 파일\01.Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Renderer.h">
+      <Filter>소스 파일\01.Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Transform.h">
+      <Filter>소스 파일\04.Component\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\TSingleTon.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStream.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\SceneLoading.h">
+      <Filter>소스 파일\01.Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\ShaderTerrain.h">
+      <Filter>소스 파일\04.Component\Resource\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\VIBufferTerrain.h">
+      <Filter>소스 파일\04.Component\Resource\VIBuffer\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\QuadTree.h">
+      <Filter>소스 파일\98.Others</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Frustum.h">
+      <Filter>소스 파일\98.Others</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Component Null.h">
+      <Filter>소스 파일\04.Component</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\GraphicDevice.cpp">
+      <Filter>소스 파일\00.GraphicDevice</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Scene.cpp">
+      <Filter>소스 파일\01.Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Layer.cpp">
+      <Filter>소스 파일\02.Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Object.cpp">
+      <Filter>소스 파일\03.Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Component.cpp">
+      <Filter>소스 파일\04.Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Resource.cpp">
+      <Filter>소스 파일\04.Component\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Texture.cpp">
+      <Filter>소스 파일\04.Component\Resource\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Camera.cpp">
+      <Filter>소스 파일\03.Object\Cameara</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\CameraDynamic.cpp">
+      <Filter>소스 파일\03.Object\Cameara</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\CameraStatic.cpp">
+      <Filter>소스 파일\03.Object\Cameara</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Timer.cpp">
+      <Filter>소스 파일\00. Mgr</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\KeyChecker.cpp">
+      <Filter>소스 파일\00. Mgr</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Shader.cpp">
+      <Filter>소스 파일\04.Component\Resource\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\ResourceMgr.cpp">
+      <Filter>소스 파일\00. Mgr</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\VIBuffer.cpp">
+      <Filter>소스 파일\04.Component\Resource\VIBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\VIBufferCube.cpp">
+      <Filter>소스 파일\04.Component\Resource\VIBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\ShaderColor.cpp">
+      <Filter>소스 파일\04.Component\Resource\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\ObjectMgr.cpp">
+      <Filter>소스 파일\00. Mgr</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\SceneMgr.cpp">
+      <Filter>소스 파일\00. Mgr</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Renderer.cpp">
+      <Filter>소스 파일\01.Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Transform.cpp">
+      <Filter>소스 파일\04.Component\Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="DataStream.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\SceneLoading.cpp">
+      <Filter>소스 파일\01.Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\ShaderTerrain.cpp">
+      <Filter>소스 파일\04.Component\Resource\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\VIBufferTerrain.cpp">
+      <Filter>소스 파일\04.Component\Resource\VIBuffer\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\QuadTree.cpp">
+      <Filter>소스 파일\98.Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Frustum.cpp">
+      <Filter>소스 파일\98.Others</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
