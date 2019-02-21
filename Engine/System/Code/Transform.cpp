@@ -9,15 +9,6 @@
 BEGIN(Engine)
 
 
-Transform * Transform::Create()
-{
-	Transform* pComponent = new Transform();
-	if (FAILED(pComponent->Init()))
-		::Safe_Delete(pComponent);
-
-	return pComponent;
-}
-
 Transform::Transform()
 	: m_pGraphicDevice(GraphicDevice::GetInstance())
 	, m_pWorldBuffer(nullptr)

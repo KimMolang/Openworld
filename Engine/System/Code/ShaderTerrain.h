@@ -8,8 +8,8 @@ BEGIN(Engine)
 class ENGINE_DLL ShaderTerrain : public Shader
 {
 public:
-	static ShaderTerrain* Create();
-	CLONE(ShaderTerrain);
+	CREATE(Engine::ShaderTerrain)
+	CLONE(ShaderTerrain)
 private:
 	explicit ShaderTerrain();
 public:

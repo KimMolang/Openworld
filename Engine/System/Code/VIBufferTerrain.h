@@ -16,7 +16,7 @@ public:
 		, const int _iCntY
 		, const char* _Path = nullptr
 	);
-	CLONE(VIBufferTerrain);
+	CLONE(VIBufferTerrain)
 private:
 	explicit VIBufferTerrain();
 public:

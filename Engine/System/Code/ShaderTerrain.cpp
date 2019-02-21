@@ -4,15 +4,6 @@
 BEGIN(Engine)
 
 
-ShaderTerrain * ShaderTerrain::Create()
-{
-	ShaderTerrain* pComponent = new ShaderTerrain();
-	if (FAILED(pComponent->Init()))
-		::Safe_Delete(pComponent);
-
-	return pComponent;
-}
-
 ShaderTerrain::ShaderTerrain()
 {
 

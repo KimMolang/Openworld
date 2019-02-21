@@ -30,7 +30,6 @@ HRESULT SceneTown::Init()
 {
 	Engine::Scene::Init();
 
-
 	//// for Test (¼öÁ¤)
 	//Engine::ShaderColor* pShader = Engine::ShaderColor::Create();
 	//Engine::GetResourceMgr()->AddResource(

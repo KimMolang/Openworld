@@ -4,15 +4,6 @@
 BEGIN(Engine)
 
 
-VIBufferCube * VIBufferCube::Create()
-{
-	VIBufferCube* pComponent = new VIBufferCube();
-	if (FAILED(pComponent->Init()))
-		::Safe_Delete(pComponent);
-
-	return pComponent;
-}
-
 VIBufferCube::VIBufferCube()
 {
 

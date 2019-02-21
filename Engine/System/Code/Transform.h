@@ -11,7 +11,8 @@ public:
 	enum class TransformType { STATIC, DYNAMIC };
 
 public :
-	static Transform* Create();
+	CREATE(Engine::Transform)
+
 private:
 	explicit Transform();
 public:

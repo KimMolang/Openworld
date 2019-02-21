@@ -8,7 +8,7 @@ BEGIN(Engine)
 class ENGINE_DLL CameraDynamic : public Camera
 {
 public:
-	static CameraDynamic* Create();
+	CREATE(Engine::CameraDynamic)
 private:
 	explicit CameraDynamic();
 public:

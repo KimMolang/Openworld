@@ -32,7 +32,7 @@ HRESULT TestObject::Init()
 	//CHECK_NULLPTR_RETURN(m_pShader, E_FAIL);
 
 	//m_mapComponent.insert(std::make_pair(L"Shader", m_pShader));
-
+	
 	return S_OK;
 }
 

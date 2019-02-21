@@ -27,6 +27,7 @@ void Resource::Release()
 void Resource::Release_RefCnt()
 {
 	::Safe_Delete(m_pRefCnt);
+
 }
 
 

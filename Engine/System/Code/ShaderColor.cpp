@@ -6,15 +6,6 @@
 BEGIN(Engine)
 
 
-ShaderColor * ShaderColor::Create()
-{
-	ShaderColor* pComponent = new ShaderColor();
-	if (FAILED(pComponent->Init()))
-		::Safe_Delete(pComponent);
-
-	return pComponent;
-}
-
 ShaderColor::ShaderColor()
 {
 
