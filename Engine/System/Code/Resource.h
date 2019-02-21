@@ -4,14 +4,6 @@
 
 BEGIN(Engine)
 
-// Create
-//#define CLONE(TYPE)			\
-//virtual TYPE* Clone()		\
-//{							\
-//	++(*m_pRefCnt);			\
-//	return new TYPE(*this);	\
-//}
-
 #define CLONE(TYPE)			\
 virtual TYPE* Clone()		\
 {							\

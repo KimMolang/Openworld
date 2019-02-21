@@ -150,9 +150,6 @@
     <ClInclude Include="Core\TSingleTon.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="DataStream.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="Code\SceneLoading.h">
       <Filter>소스 파일\01.Scene</Filter>
     </ClInclude>

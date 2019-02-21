@@ -32,3 +32,16 @@
 			m_pInstance = nullptr;					\
 		}											\
 	}
+
+
+
+#define CREATE(TYPE)		\
+static TYPE* Create()		\
+{							\
+	TYPE* pComponent = new TYPE();	\
+									\
+	if (FAILED(pComponent->Init()))	\
+		::Safe_Delete(pComponent);	\
+									\
+	return pComponent;		\
+}
