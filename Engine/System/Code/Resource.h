@@ -4,6 +4,14 @@
 
 BEGIN(Engine)
 
+// Create
+//#define CLONE(TYPE)			\
+//virtual TYPE* Clone()		\
+//{							\
+//	++(*m_pRefCnt);			\
+//	return new TYPE(*this);	\
+//}
+
 #define CLONE(TYPE)			\
 virtual TYPE* Clone()		\
 {							\
@@ -20,6 +28,8 @@ public:
 
 public:
 	virtual Resource* Clone()	PURE;
+
+	virtual HRESULT	Init()		PURE;
 	virtual void	Update()	PURE;
 	virtual void	Render()	PURE;
 protected:

@@ -96,6 +96,11 @@ void Texture::Load_DDS(std::wstring _wstrPath)
 	GraphicDevice::GetInstance()->GetDevice()->CreateSamplerState(&tSamplerData, &m_pSamplerStates);
 }
 
+HRESULT Texture::Init()
+{
+	return S_OK;
+}
+
 void Texture::Update()
 {
 

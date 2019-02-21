@@ -40,7 +40,7 @@ public :
 	);
 
 public :
-	virtual HRESULT			Init()			PURE;
+	virtual HRESULT			Init();
 protected:
 	virtual Object::EState	Update();
 	virtual void			Render();

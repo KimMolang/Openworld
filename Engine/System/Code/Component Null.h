@@ -13,6 +13,7 @@ public:
 	virtual ~ComponentNull(void) {};
 
 public:
+	virtual HRESULT	Init() { return S_OK; }
 	virtual void Update(void) {};
 	virtual void Render(void) {};
 };

@@ -13,6 +13,9 @@ protected:
 public:
 	virtual ~Shader()	PURE;
 
+public :
+	HRESULT SetVertexShader();
+	HRESULT SetPixelShader();
 
 public:
 	virtual void	Render();

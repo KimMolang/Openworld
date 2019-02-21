@@ -11,7 +11,11 @@ BEGIN(Engine)
 
 Transform * Transform::Create()
 {
-	return new Transform();
+	Transform* pComponent = new Transform();
+	if (FAILED(pComponent->Init()))
+		::Safe_Delete(pComponent);
+
+	return pComponent;
 }
 
 Transform::Transform()
@@ -25,12 +29,19 @@ Transform::Transform()
 	, m_vScale(1.f, 1.f, 1.f)
 {
 	D3DXMatrixIdentity(&m_matWorld);
-	Init_WorldBuffer();
 }
 
 Transform::~Transform()
 {
 	Release();
+}
+
+HRESULT Transform::Init()
+{
+	Init_WorldBuffer();
+
+
+	return S_OK;
 }
 
 void Transform::Init_WorldBuffer()

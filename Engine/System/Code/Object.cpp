@@ -11,7 +11,7 @@ BEGIN(Engine)
 
 Object::Object()
 {
-	AddDefaultComponent();
+	
 }
 
 Object::~Object()
@@ -87,7 +87,10 @@ void Object::Release_Component()
 
 HRESULT Object::Init()
 {
+	AddDefaultComponent();
+
 	m_eObjState = EState::STATE_ALIVE;
+
 
 	return S_OK;
 }

@@ -141,8 +141,8 @@ protected: // Index
 	UINT				m_nIdxPlus;
 
 
-protected:
-	Shader*			m_pShader;
+//protected:
+//	Shader*			m_pShader;
 };
 
 

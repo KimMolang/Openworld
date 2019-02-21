@@ -27,10 +27,6 @@ Camera::Camera()
 	D3DXMatrixIdentity(&m_matView);
 	D3DXMatrixIdentity(&m_matProj);
 	D3DXMatrixIdentity(&m_matOrtho);
-
-	Init_ViewBuffer();
-	Init_ProjBuffer();
-	Init_Viewport();
 }
 
 Camera::~Camera()
@@ -68,6 +64,11 @@ void Camera::Init_ProjBuffer()
 HRESULT Camera::Init()
 {
 	Object::Init();
+
+	Init_ViewBuffer();
+	Init_ProjBuffer();
+	Init_Viewport();
+
 
 	m_fFovy = (float)D3DXToRadian(90.f);
 	//m_fAspect = float(CLIENT_WINCX) / CLIENT_WINCY; // (수정) (옵션) 해상도
