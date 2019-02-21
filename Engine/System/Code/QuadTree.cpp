@@ -2,7 +2,7 @@
 #include "QuadTree.h"
 
 #include "VIBufferTerrain.h"
-#include "ShaderTerrain.h"
+#include "ShaderNormal.h"
 #include "Frustum.h"
 
 #include <cmath>
