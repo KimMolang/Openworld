@@ -25,12 +25,19 @@ HRESULT Shader::SetShader
 	const LPCWSTR _pathOfVSFile
 	, const LPCWSTR _pathOfPSFile
 	, const D3D11_INPUT_ELEMENT_DESC _inputElement[] /*= SHARDER_INPUT_ELEMENT_COLOR*/
+	, const UINT _elementNum /*= SHARDER_INPUT_ELEMENT_NUM_COLOR*/
 )
 {
-	UINT iElementNum = (sizeof(_inputElement) / sizeof(*(_inputElement)));//= ARRAYSIZE(tInputLayout);
+	UINT iElementNum = _elementNum;
+	// = (sizeof(_inputElement) / sizeof(*(_inputElement)));
+	// [] 는 결국 포인터이기 때문에 사이즈 값이 포인트 사이즈로 아놉니다.
+	//= ARRAYSIZE(tInputLayout);
 	
-	if (iElementNum == 0)
-		return E_FAIL;
+	//if (iElementNum == 0)
+	//{
+	//	CHECK_FAILED_MSG(E_FAIL, L"Shader::SetShader >> iElementNum == 0");
+	//	return E_FAIL;
+	//}
 
 
 	DWORD swFlag = D3DCOMPILE_ENABLE_STRICTNESS;

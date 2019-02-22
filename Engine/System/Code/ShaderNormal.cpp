@@ -22,6 +22,7 @@ HRESULT ShaderNormal::Init()
 		L"./bin/Resource/HLSL/Shader_Normal.hlsl"
 		, L"./bin/Resource/HLSL/Shader_Normal.hlsl"
 		, SHARDER_INPUT_ELEMENT_NORMAL
+		, SHARDER_INPUT_ELEMENT_NUM_NORMAL
 	);
 
 

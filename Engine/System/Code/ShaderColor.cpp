@@ -24,6 +24,7 @@ HRESULT ShaderColor::Init()
 		L"./bin/Resource/Fx/Shader_Color.fx"
 		, L"./bin/Resource/Fx/Shader_Color.fx"
 		, SHARDER_INPUT_ELEMENT_COLOR
+		, SHARDER_INPUT_ELEMENT_NUM_COLOR
 	);
 
 	return S_OK;
