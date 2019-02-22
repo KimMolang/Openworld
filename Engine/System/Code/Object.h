@@ -68,4 +68,21 @@ protected:
 };
 
 
+class ENGINE_DLL GameObject abstract : public Object
+{
+protected:
+	explicit GameObject(void) ();
+public:
+	virtual ~GameObject(void) PURE;
+
+protected:
+	virtual void	Render_MaterialAndMesh();
+
+
+protected:
+	class Material*	m_pMaterial; // (수정) 텍스쳐 추가해서 매터리얼로 바꿔랑
+	class VIBuffer*	m_pMeshBuffer;
+};
+
+
 END
