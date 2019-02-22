@@ -48,8 +48,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     MSG msg;
 	msg.message = WM_NULL;
 
-	MainGame	MainGame;
-	CHECK_FAILED(MainGame.Init());
+	MainGame*	pMainGame = MainGame::Create();
 	//ShowCursor(false);
 
 	while (msg.message != WM_QUIT)
@@ -62,10 +61,13 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 		else
 		{
 			// (수정) (옵션) 프레임
-			MainGame.Update();
-			MainGame.Render();
+			pMainGame->Update();
+			pMainGame->Render();
 		}
 	}   
+
+	::Safe_Release(pMainGame);
+
 
     return (int) msg.wParam;
 }

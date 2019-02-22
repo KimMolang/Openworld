@@ -16,7 +16,7 @@ Object::Object()
 
 Object::~Object()
 {
-	Release_Component();
+	
 }
 
 void Object::SetWorldMatrix
@@ -106,5 +106,9 @@ void Object::Render()
 	Engine::Object::Render_Component();
 }
 
+void Object::Release()
+{
+	Release_Component();
+}
 
 END

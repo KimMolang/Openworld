@@ -44,7 +44,7 @@ public :
 protected:
 	virtual Object::EState	Update();
 	virtual void			Render();
-	virtual void			Release()		PURE;
+	virtual void			Release();
 
 
 private:

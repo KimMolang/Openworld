@@ -11,7 +11,10 @@ namespace Engine
 class MainGame
 {
 public:
+	CREATE(MainGame)
+private:
 	explicit MainGame();
+public :
 	~MainGame();
 
 private :
