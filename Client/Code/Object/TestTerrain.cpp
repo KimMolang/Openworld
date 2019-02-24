@@ -28,7 +28,7 @@ HRESULT TestTerrain::Init()
 		Engine::ResourceMgr::RESOURCE_ATTRI_STATIC, Engine::ResourceMgr::RESOURCE_TYPE_SHADER, L"Test_Shader_Normal");
 	CHECK_NULLPTR_RETURN(pShader, E_FAIL);
 
-	static_cast<Engine::Material*>(m_pMaterial)->SetMaterial(pTexture, pShader);
+	static_cast<Engine::Material*>(m_pMaterial)->SetMaterial(pShader, pTexture);
 
 	// Model Buffer ---------------------
 	m_pMeshBuffer = Engine::GetResourceMgr()->CloneResource(
@@ -41,9 +41,7 @@ HRESULT TestTerrain::Init()
 
 Engine::Object::EState TestTerrain::Update()
 {
-	Engine::GameObject::Update();
-
-	return m_eObjState;
+	return Engine::GameObject::Update();
 }
 
 void TestTerrain::Render()

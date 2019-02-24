@@ -16,38 +16,35 @@ TestObject::~TestObject()
 
 HRESULT TestObject::Init()
 {
-	Engine::Object::Init();
+	Engine::GameObject::Init();
+
+
+	// Texture ------------
+	// No texture
+	// Shader ---------------------
+	Engine::Component* pShader = Engine::GetResourceMgr()->CloneResource(
+		Engine::ResourceMgr::RESOURCE_ATTRI_STATIC, Engine::ResourceMgr::RESOURCE_TYPE_SHADER, L"Test_Shader_Color");
+	CHECK_NULLPTR_RETURN(pShader, E_FAIL);
+
+	static_cast<Engine::Material*>(m_pMaterial)->SetMaterial(pShader);
 
 	// Model Buffer ---------------------
-	m_pBuffer = Engine::GetResourceMgr()->CloneResource(
+	m_pMeshBuffer = Engine::GetResourceMgr()->CloneResource(
 		Engine::ResourceMgr::RESOURCE_ATTRI_STATIC, Engine::ResourceMgr::RESOURCE_TYPE_BUFFER, L"Test_Buffer_Cube");
-	CHECK_NULLPTR_RETURN(m_pBuffer, E_FAIL);
-
-	m_mapComponent.insert(std::make_pair(L"Buffer_Box", m_pBuffer));
+	CHECK_NULLPTR_RETURN(m_pMeshBuffer, E_FAIL);
 
 
-	// Shader ---------------------
-	m_pShader = Engine::GetResourceMgr()->CloneResource(
-		Engine::ResourceMgr::RESOURCE_ATTRI_STATIC, Engine::ResourceMgr::RESOURCE_TYPE_SHADER, L"Test_Shader_Color");
-	CHECK_NULLPTR_RETURN(m_pShader, E_FAIL);
-
-	m_mapComponent.insert(std::make_pair(L"Shader", m_pShader));
-	
 	return S_OK;
 }
 
 Engine::Object::EState TestObject::Update()
 {
-	return Engine::Object::Update();
+	return Engine::GameObject::Update();
 }
 
 void TestObject::Render()
 {
-	m_pTransform->Render();
-	m_pShader->Render();
-	m_pBuffer->Render();
-
-	//Engine::Object::Render();
+	GameObject::Render();
 }
 
 void TestObject::Release()

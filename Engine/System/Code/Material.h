@@ -19,7 +19,7 @@ public:
 	void SetMaterial
 	(
 		Engine::Component* _pShader
-		, Engine::Component* _pTextrue
+		, Engine::Component* _pTextrue = nullptr
 	);
 
 public:

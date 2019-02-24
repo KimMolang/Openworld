@@ -7,7 +7,7 @@ namespace Engine
 	class Component;
 }
 
-class TestObject : public Engine::Object
+class TestObject : public Engine::GameObject
 {
 public:
 	explicit TestObject();
@@ -18,9 +18,4 @@ public:
 	virtual Engine::Object::EState	Update();
 	virtual void					Render();
 	virtual void					Release();
-
-private :
-	// (수정)ComponentNull 사용 가능합니다
-	class Engine::Component*		m_pShader;
-	class Engine::Component*		m_pBuffer;
 };

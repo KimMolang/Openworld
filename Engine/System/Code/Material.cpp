@@ -14,20 +14,13 @@ Material::~Material()
 void Material::SetMaterial
 (
 	Engine::Component* _pShader
-	, Engine::Component* _pTextrue
+	, Engine::Component* _pTextrue /* = nullptr */
 )
 {
 	Component* pComponentNull = ResourceMgr::GetInstance()->GetComponentNull();
 
-	if (_pShader == nullptr)
-		m_pShader = pComponentNull;
-	else
-		m_pShader = _pShader;
-
-	if (_pShader == nullptr)
-		m_pTexture = pComponentNull;
-	else
-		m_pTexture = _pTextrue;
+	m_pShader = (_pShader == nullptr) ? pComponentNull : _pShader;
+	m_pTexture = (_pTextrue == nullptr) ? pComponentNull : _pTextrue;
 }
 
 HRESULT Material::Init()
