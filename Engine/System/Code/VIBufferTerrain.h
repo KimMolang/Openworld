@@ -32,7 +32,7 @@ public :
 
 public:
 	virtual HRESULT	Init(const int _iCntX, const int _iCntZ, const char* _Path = nullptr);
-	virtual void	Update();
+	virtual void	Update() {};
 	virtual void	Render();
 protected:
 	virtual void	CreateRasterizerState();

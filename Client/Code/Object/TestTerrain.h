@@ -2,10 +2,6 @@
 
 #include "Object.h"
 
-namespace Engine
-{
-	class Component;
-}
 
 class TestTerrain : public Engine::GameObject
 {

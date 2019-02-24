@@ -62,8 +62,6 @@ protected:
 	virtual void			Release();
 
 
-private:
-	void	AddDefaultComponent();
 protected:
 	void	Update_Component();
 	void	Render_Component();
@@ -94,6 +92,10 @@ public:
 	// 이건 abstract 클래스입니다! 라는 의미.
 	// 그래서 몸체가 필요합니다.
 
+public:
+	virtual HRESULT			Init();
+protected:
+	virtual void		Render();
 
 protected:
 	class Component*	m_pMaterial;

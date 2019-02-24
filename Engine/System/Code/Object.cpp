@@ -36,7 +36,10 @@ const Component* Object::GetComponent(const std::wstring& _wstrComponentKey)
 
 HRESULT Object::Init()
 {
-	AddDefaultComponent();
+	// Transform ------------
+	m_pTransform = Transform::Create();
+	m_mapComponent.insert(
+		std::make_pair(L"Transform", m_pTransform));
 
 	m_eObjState = EState::STATE_ALIVE;
 
@@ -47,25 +50,18 @@ HRESULT Object::Init()
 Object::EState Object::Update()
 {
 	Engine::Object::Update_Component();
+
 	return m_eObjState;
 }
 
 void Object::Render()
 {
-	Engine::Object::Render_Component();
+	m_pTransform->Render();
 }
 
 void Object::Release()
 {
 	Release_Component();
-}
-
-void Object::AddDefaultComponent()
-{
-	// Transform ------------
-	m_pTransform = Transform::Create();
-	m_mapComponent.insert(
-		std::make_pair(L"Transform", m_pTransform));
 }
 
 void Object::Update_Component()
@@ -96,13 +92,37 @@ void Object::Release_Component()
 // 2) GameObject =================================
 GameObject::GameObject()
 {
-	Component* pComponentNull = ResourceMgr::GetInstance()->GetComponentNull();
-	m_pMeshBuffer = m_pMaterial = pComponentNull;
+	
+}
 
+HRESULT GameObject::Init()
+{
+	Object::Init();
+
+
+	Component* pComponentNull
+		= ResourceMgr::GetInstance()->GetComponentNull();
+
+	// Material ------------
+	m_pMaterial = Material::Create();
 	m_mapComponent.insert(
 		std::make_pair(L"Material", m_pMaterial));
+
+	// Mesh Buffer
+	m_pMeshBuffer = pComponentNull;
 	m_mapComponent.insert(
 		std::make_pair(L"MeshBuffer", m_pMeshBuffer));
+
+
+	return S_OK;
+}
+
+void GameObject::Render()
+{
+	Object::Render();
+
+	m_pMaterial->Render();
+	m_pMeshBuffer->Render();
 }
 
 END

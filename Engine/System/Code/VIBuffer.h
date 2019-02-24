@@ -115,7 +115,7 @@ public :
 
 public:
 	virtual HRESULT	Init();
-	virtual void	Update() PURE;
+	virtual void	Update() {};
 	virtual void	Render();
 protected:
 	virtual void	CreateRasterizerState();

@@ -125,10 +125,5 @@ void VIBufferCube::Init_Idx()
 		GraphicDevice::GetInstance()->GetDevice()->CreateBuffer(&tBufferDesc, &tData, &m_pIdxBuffer), );
 }
 
-void VIBufferCube::Update()
-{
-
-}
-
 
 END

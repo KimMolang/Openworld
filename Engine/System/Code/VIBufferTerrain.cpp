@@ -65,10 +65,6 @@ HRESULT VIBufferTerrain::Init
 	return S_OK;
 }
 
-void VIBufferTerrain::Update()
-{
-}
-
 void VIBufferTerrain::Render()
 {
 	if (nullptr == m_pVtxBuffer)

@@ -18,7 +18,7 @@ public:
 
 public:
 	virtual HRESULT			Init();
-	virtual void			Update();
+	virtual void			Update() {};
 
 
 private:
