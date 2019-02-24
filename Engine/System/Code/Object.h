@@ -71,12 +71,23 @@ protected:
 class ENGINE_DLL GameObject abstract : public Object
 {
 protected:
-	explicit GameObject(void) ();
+	explicit GameObject(void) {};
 public:
-	virtual ~GameObject(void) PURE;
+	virtual ~GameObject(void) PURE {};
 
 protected:
-	virtual void	Render_MaterialAndMesh();
+	virtual void	Render_MaterialAndMesh()
+	{
+		// (수정 1.) 텍스쳐 추가해서 매터리얼로 바꿔랑
+	// (수정 2.)
+	// (수정 3.) 컴포넌트 널 처리
+	// 다 하면 숙제
+	// 숙제 다 하면 큐티 끄적이기
+	// FBS static 메쉬 읽어 오는 거 구현해놓기
+	// 큐티로 맵툴 만들기
+	// m_pMaterial
+	//m_pMeshBuffer->
+	};
 
 
 protected:

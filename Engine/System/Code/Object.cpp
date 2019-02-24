@@ -9,10 +9,14 @@
 BEGIN(Engine)
 
 
-// 1) Object Class =========================================================================
 Object::Object()
 {
 	
+}
+
+Object::~Object()
+{
+
 }
 
 void Object::SetWorldMatrix
@@ -105,21 +109,6 @@ void Object::Release_Component()
 {
 	for_each(m_mapComponent.begin(), m_mapComponent.end(), Safe_Delete_map());
 	m_mapComponent.clear();
-}
-
-
-// 2) GameObject Classs =========================================================================
-void GameObject::Render_MaterialAndMesh()
-{
-	// (수정 1.) 텍스쳐 추가해서 매터리얼로 바꿔랑
-	// (수정 2.)
-	// (수정 3.) 컴포넌트 널 처리
-	// 다 하면 숙제
-	// 숙제 다 하면 큐티 끄적이기
-	// FBS static 메쉬 읽어 오는 거 구현해놓기
-	// 큐티로 맵툴 만들기
-	// m_pMaterial
-	//m_pMeshBuffer->
 }
 
 
