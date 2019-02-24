@@ -3,6 +3,8 @@
 #include "Component.h"
 #include "Transform.h"
 
+#include "Material.h"
+
 BEGIN(Engine)
 
 
@@ -30,7 +32,15 @@ public:
 
 public:
 	const Component*	GetComponent(const std::wstring& _wstrComponentKey);
-	template<typename T> const Component*	GetComponent();
+	template<typename T> const Component*	GetComponent()
+	{
+		for each (auto& iter in m_mapComponent)
+		{
+			//if (typeid(iter->second).Get() == typeid(T).Get())
+			if (typeid(iter->second) == typeid(T))
+				return iter->second;
+		}
+	}
 
 	GET(Engine::Object::EState, ObjState, m_eObjState);
 protected:
@@ -72,7 +82,6 @@ protected:
 	friend class Layer;
 };
 
-
 class ENGINE_DLL GameObject abstract : public Object
 {
 protected:
@@ -85,12 +94,10 @@ public:
 	// 이건 abstract 클래스입니다! 라는 의미.
 	// 그래서 몸체가 필요합니다.
 
-protected :
-	//SetMaerial 
 
 protected:
-	class Engine::Component*	m_pMaterial;
-	class Engine::Component*	m_pMeshBuffer;
+	class Component*	m_pMaterial;
+	class Component*	m_pMeshBuffer;
 };
 
 

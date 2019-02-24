@@ -34,17 +34,6 @@ const Component* Object::GetComponent(const std::wstring& _wstrComponentKey)
 	return iter->second;
 }
 
-template<typename T>
-const Component* Object::GetComponent()
-{
-	for each (auto iter in m_mapComponent)
-	{
-		//if (typeid(iter->second).Get() == typeid(T).Get())
-		if (typeid(iter->second) == typeid(T))
-			return iter->second;
-	}
-}
-
 HRESULT Object::Init()
 {
 	AddDefaultComponent();
@@ -108,7 +97,12 @@ void Object::Release_Component()
 GameObject::GameObject()
 {
 	Component* pComponentNull = ResourceMgr::GetInstance()->GetComponentNull();
-	m_pMaterial = m_pMeshBuffer = pComponentNull;
+	m_pMeshBuffer = m_pMaterial = pComponentNull;
+
+	m_mapComponent.insert(
+		std::make_pair(L"Material", m_pMaterial));
+	m_mapComponent.insert(
+		std::make_pair(L"MeshBuffer", m_pMeshBuffer));
 }
 
 END
