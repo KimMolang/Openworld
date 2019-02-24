@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "TestTerrain.h"
 
-#include "ResourceMgr.h"
 #include "Export_Function_Mgr.h"
 
 

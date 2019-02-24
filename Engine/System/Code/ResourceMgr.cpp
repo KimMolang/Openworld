@@ -17,20 +17,24 @@
 //#include "Texture.h"
 //#include "Font.h"
 
+#include "ComponentNull.h"
+
 BEGIN(Engine)
 
 
-IMPLEMENT_SINGLETON(ResourceMgr)
+IMPLEMENT_SINGLETON_INIT_AND_RELEASE(ResourceMgr)
 
 
 ResourceMgr::ResourceMgr()
+	: m_pComponentNull(nullptr)
 {
 
 }
 
 ResourceMgr::~ResourceMgr()
 {
-	Release_All();
+	Release_AllResource();
+	Release_ComponentNull();
 }
 
 HRESULT ResourceMgr::AddResource
@@ -92,7 +96,7 @@ Resource* ResourceMgr::CloneResource
 	return iter->second->Clone();
 }
 
-void ResourceMgr::Release_Dynamic()
+void ResourceMgr::Release_DynamicResource()
 {
 	for (int i = 0; i < RESOURCE_TYPE_END; ++i)
 	{
@@ -102,7 +106,7 @@ void ResourceMgr::Release_Dynamic()
 	}
 }
 
-void ResourceMgr::Release_All()
+void ResourceMgr::Release_AllResource()
 {
 	for (int i = 0; i < RESOURCE_ATTRI_END; ++i)
 	{
@@ -115,5 +119,26 @@ void ResourceMgr::Release_All()
 	}
 }
 
+HRESULT ResourceMgr::Init()
+{
+	Init_ComponenetNull();
+
+	return S_OK;
+}
+
+void ResourceMgr::Release()
+{
+	Release_ComponentNull();
+}
+
+void ResourceMgr::Init_ComponenetNull()
+{
+	m_pComponentNull = new ComponentNull();
+}
+
+void ResourceMgr::Release_ComponentNull()
+{
+	::Safe_Delete(m_pComponentNull);
+}
 
 END

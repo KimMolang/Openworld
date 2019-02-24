@@ -5,6 +5,9 @@
 BEGIN(Engine)
 
 
+// (수정) CameraNull 이걸 쓸라고 했던
+// 위치의 코드가 수정될 가능성이 있으니
+// 아직 사용하지 맙시다.
 class ENGINE_DLL CameraNull : public Camera
 {
 protected:

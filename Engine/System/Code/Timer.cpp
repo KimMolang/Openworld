@@ -16,6 +16,7 @@ Timer::Timer()
 
 Timer::~Timer()
 {
+
 }
 
 void Timer::Init(void)

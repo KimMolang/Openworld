@@ -4,15 +4,6 @@
 BEGIN(Engine)
 
 
-Component::Component(void)
-{
-
-}
-
-Component::~Component(void)
-{
-
-}
 
 
 END

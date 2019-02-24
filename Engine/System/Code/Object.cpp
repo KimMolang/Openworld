@@ -6,19 +6,11 @@
 #include "Component.h"
 #include "Transform.h"
 
+#include "ResourceMgr.h"
+
 BEGIN(Engine)
 
-
-Object::Object()
-{
-	
-}
-
-Object::~Object()
-{
-
-}
-
+// 1) Object =================================
 void Object::SetWorldMatrix
 (
 	const D3DXVECTOR3& _vPos /*= D3DXVECTOR3(0.0f, 0.0f, 0.0f)*/
@@ -111,5 +103,12 @@ void Object::Release_Component()
 	m_mapComponent.clear();
 }
 
+
+// 2) GameObject =================================
+GameObject::GameObject()
+{
+	Component* pComponentNull = ResourceMgr::GetInstance()->GetComponentNull();
+	m_pMaterial = m_pMeshBuffer = pComponentNull;
+}
 
 END

@@ -20,7 +20,7 @@ public:
 	virtual void					Release();
 
 private :
-	// ComponentNull 사용 가능합니다
+	// (수정)ComponentNull 사용 가능합니다
 	class Engine::Component*		m_pShader;
 	class Engine::Component*		m_pBuffer;
 };

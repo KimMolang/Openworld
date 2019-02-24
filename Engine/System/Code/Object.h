@@ -19,9 +19,14 @@ public:
 	};
 
 protected:
-	explicit Object(void);
+	explicit Object(void) = default;
 public:
-	virtual ~Object(void) PURE;
+	virtual ~Object(void) = default;
+	// 순수 함수는 단순히 인터페이스 방향만제공하기 때문에 (이런 게 필요합니다!)
+	// 몸체가 필요없지만
+	// 소멸자에 순수 키워드를 붙이면 그 의미가 달라진다.
+	// 이건 abstract 클래스입니다! 라는 의미.
+	// 그래서 몸체가 필요합니다.
 
 public:
 	const Component*	GetComponent(const std::wstring& _wstrComponentKey);
@@ -62,7 +67,7 @@ protected:
 	EState				m_eObjState;
 
 protected:
-	class Transform*			m_pTransform;
+	class Transform*	m_pTransform;
 
 	friend class Layer;
 };
@@ -71,28 +76,21 @@ protected:
 class ENGINE_DLL GameObject abstract : public Object
 {
 protected:
-	explicit GameObject(void) {};
+	explicit GameObject(void);
 public:
-	virtual ~GameObject(void) PURE {};
+	virtual ~GameObject(void) = default;
+	// 순수 함수는 단순히 인터페이스 방향만제공하기 때문에 (이런 게 필요합니다!)
+	// 몸체가 필요없지만
+	// 소멸자에 순수 키워드를 붙이면 그 의미가 달라진다.
+	// 이건 abstract 클래스입니다! 라는 의미.
+	// 그래서 몸체가 필요합니다.
+
+protected :
+	//SetMaerial 
 
 protected:
-	virtual void	Render_MaterialAndMesh()
-	{
-		// (수정 1.) 텍스쳐 추가해서 매터리얼로 바꿔랑
-	// (수정 2.)
-	// (수정 3.) 컴포넌트 널 처리
-	// 다 하면 숙제
-	// 숙제 다 하면 큐티 끄적이기
-	// FBS static 메쉬 읽어 오는 거 구현해놓기
-	// 큐티로 맵툴 만들기
-	// m_pMaterial
-	//m_pMeshBuffer->
-	};
-
-
-protected:
-	class Material*	m_pMaterial; // (수정) 텍스쳐 추가해서 매터리얼로 바꿔랑
-	class VIBuffer*	m_pMeshBuffer;
+	class Engine::Component*	m_pMaterial;
+	class Engine::Component*	m_pMeshBuffer;
 };
 
 

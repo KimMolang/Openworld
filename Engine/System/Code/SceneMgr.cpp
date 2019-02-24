@@ -75,8 +75,8 @@ void SceneMgr::ReleaseCurScene()
 {
 	::Safe_Delete(m_pCurScene);
 
-	// (Need the Modify)
-	ResourceMgr::GetInstance()->Release_Dynamic();
+	// (수정)
+	ResourceMgr::GetInstance()->Release_DynamicResource();
 }
 
 //// 로딩이 끝나면 아래 함수가 불리고 m_pCurScene 에 씬을 할당한다.

@@ -8,6 +8,7 @@
 #pragma once
 
 #include "Texture.h"
+#include "Component.h"
 
 BEGIN(Engine)
 
@@ -80,15 +81,26 @@ public:
 		, const EResourceType& _eEResourceType
 		, const std::wstring& _wstrKey
 	);
-
+	
+	//GET(Component*, ComponenetNull, m_pComponentNull);
+	Component* const GetComponentNull() { return m_pComponentNull;  }
 
 public:
-	void	Release_Dynamic();
-	void	Release_All();
+	void	Release_DynamicResource();
+	void	Release_AllResource();
 
+private :
+	HRESULT Init();
+	void Release();
+
+	void Init_ComponenetNull();
+	void Release_ComponentNull();
 
 private:
-	std::map<std::wstring, Resource*>		m_mapResource[RESOURCE_ATTRI_END][RESOURCE_TYPE_END];
+	std::map<std::wstring, Resource*>	m_mapResource[RESOURCE_ATTRI_END][RESOURCE_TYPE_END];
+
+private :
+	Component*			m_pComponentNull;
 };
 
 

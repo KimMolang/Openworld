@@ -176,7 +176,7 @@
     <ClInclude Include="Code\CameraDynamic.h" />
     <ClInclude Include="Code\CameraNull.h" />
     <ClInclude Include="Code\CameraStatic.h" />
-    <ClInclude Include="Code\Component Null.h" />
+    <ClInclude Include="Code\ComponentNull.h" />
     <ClInclude Include="Code\Component.h" />
     <ClInclude Include="Code\Export_Function_Mgr.h" />
     <ClInclude Include="Code\Export_Function_Mgr_GraphicDevice.h" />
@@ -184,6 +184,7 @@
     <ClInclude Include="Code\GraphicDevice.h" />
     <ClInclude Include="Code\KeyChecker.h" />
     <ClInclude Include="Code\Layer.h" />
+    <ClInclude Include="Code\Material.h" />
     <ClInclude Include="Code\Object.h" />
     <ClInclude Include="Code\ObjectMgr.h" />
     <ClInclude Include="Code\QuadTree.h" />
@@ -216,6 +217,7 @@
     <ClCompile Include="Code\GraphicDevice.cpp" />
     <ClCompile Include="Code\KeyChecker.cpp" />
     <ClCompile Include="Code\Layer.cpp" />
+    <ClCompile Include="Code\Material.cpp" />
     <ClCompile Include="Code\Object.cpp" />
     <ClCompile Include="Code\ObjectMgr.cpp" />
     <ClCompile Include="Code\QuadTree.cpp" />

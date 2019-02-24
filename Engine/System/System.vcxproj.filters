@@ -28,12 +28,6 @@
     <Filter Include="소스 파일\04.Component\Resource">
       <UniqueIdentifier>{216126be-db2b-45fe-80bc-06c393a4ecbf}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\04.Component\Resource\Shader">
-      <UniqueIdentifier>{4ff332fc-1bc6-4c52-86fa-96fd0c00cc31}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\04.Component\Resource\Texture">
-      <UniqueIdentifier>{0e6812be-43fb-4430-9af7-9e442303f173}</UniqueIdentifier>
-    </Filter>
     <Filter Include="소스 파일\04.Component\Collision">
       <UniqueIdentifier>{4e3649a8-7aca-44db-bfdb-e434ffcd99bc}</UniqueIdentifier>
     </Filter>
@@ -64,6 +58,15 @@
     <Filter Include="소스 파일\98.Others">
       <UniqueIdentifier>{cb8cf599-b075-4213-bb89-873334ab8a14}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\04.Component\Resource\Material">
+      <UniqueIdentifier>{57161ddf-b2ba-4679-8266-c21ee5e216d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Component\Resource\Material\Shader">
+      <UniqueIdentifier>{4ff332fc-1bc6-4c52-86fa-96fd0c00cc31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Component\Resource\Material\Texture">
+      <UniqueIdentifier>{0e6812be-43fb-4430-9af7-9e442303f173}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -90,9 +93,6 @@
     <ClInclude Include="Code\Resource.h">
       <Filter>소스 파일\04.Component\Resource</Filter>
     </ClInclude>
-    <ClInclude Include="Code\Texture.h">
-      <Filter>소스 파일\04.Component\Resource\Texture</Filter>
-    </ClInclude>
     <ClInclude Include="Code\Export_Function_Mgr_GraphicDevice.h">
       <Filter>소스 파일\99.Export</Filter>
     </ClInclude>
@@ -118,7 +118,7 @@
       <Filter>소스 파일\00. Mgr</Filter>
     </ClInclude>
     <ClInclude Include="Code\Shader.h">
-      <Filter>소스 파일\04.Component\Resource\Shader</Filter>
+      <Filter>소스 파일\04.Component\Resource\Material\Shader</Filter>
     </ClInclude>
     <ClInclude Include="Code\ResourceMgr.h">
       <Filter>소스 파일\00. Mgr</Filter>
@@ -130,7 +130,7 @@
       <Filter>소스 파일\04.Component\Resource\VIBuffer</Filter>
     </ClInclude>
     <ClInclude Include="Code\ShaderColor.h">
-      <Filter>소스 파일\04.Component\Resource\Shader</Filter>
+      <Filter>소스 파일\04.Component\Resource\Material\Shader</Filter>
     </ClInclude>
     <ClInclude Include="Code\ObjectMgr.h">
       <Filter>소스 파일\00. Mgr</Filter>
@@ -162,11 +162,17 @@
     <ClInclude Include="Code\Frustum.h">
       <Filter>소스 파일\98.Others</Filter>
     </ClInclude>
-    <ClInclude Include="Code\Component Null.h">
-      <Filter>소스 파일\04.Component</Filter>
-    </ClInclude>
     <ClInclude Include="Code\ShaderNormal.h">
-      <Filter>소스 파일\04.Component\Resource\Shader</Filter>
+      <Filter>소스 파일\04.Component\Resource\Material\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Texture.h">
+      <Filter>소스 파일\04.Component\Resource\Material\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Material.h">
+      <Filter>소스 파일\04.Component\Resource\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\ComponentNull.h">
+      <Filter>소스 파일\04.Component</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -191,9 +197,6 @@
     <ClCompile Include="Code\Resource.cpp">
       <Filter>소스 파일\04.Component\Resource</Filter>
     </ClCompile>
-    <ClCompile Include="Code\Texture.cpp">
-      <Filter>소스 파일\04.Component\Resource\Texture</Filter>
-    </ClCompile>
     <ClCompile Include="Code\Camera.cpp">
       <Filter>소스 파일\03.Object\Cameara</Filter>
     </ClCompile>
@@ -210,7 +213,7 @@
       <Filter>소스 파일\00. Mgr</Filter>
     </ClCompile>
     <ClCompile Include="Code\Shader.cpp">
-      <Filter>소스 파일\04.Component\Resource\Shader</Filter>
+      <Filter>소스 파일\04.Component\Resource\Material\Shader</Filter>
     </ClCompile>
     <ClCompile Include="Code\ResourceMgr.cpp">
       <Filter>소스 파일\00. Mgr</Filter>
@@ -222,7 +225,7 @@
       <Filter>소스 파일\04.Component\Resource\VIBuffer</Filter>
     </ClCompile>
     <ClCompile Include="Code\ShaderColor.cpp">
-      <Filter>소스 파일\04.Component\Resource\Shader</Filter>
+      <Filter>소스 파일\04.Component\Resource\Material\Shader</Filter>
     </ClCompile>
     <ClCompile Include="Code\ObjectMgr.cpp">
       <Filter>소스 파일\00. Mgr</Filter>
@@ -252,7 +255,13 @@
       <Filter>소스 파일\98.Others</Filter>
     </ClCompile>
     <ClCompile Include="Code\ShaderNormal.cpp">
-      <Filter>소스 파일\04.Component\Resource\Shader</Filter>
+      <Filter>소스 파일\04.Component\Resource\Material\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Texture.cpp">
+      <Filter>소스 파일\04.Component\Resource\Material\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Material.cpp">
+      <Filter>소스 파일\04.Component\Resource\Material</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

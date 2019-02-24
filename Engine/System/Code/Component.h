@@ -33,9 +33,9 @@ public :
 	// 이용해서 구체화(instantiation)과정을 거치게 되는데..)
 
 protected:
-	explicit Component(void);
+	explicit Component(void) = default;
 public:
-	virtual ~Component(void) PURE;
+	virtual ~Component(void) = default;
 
 public:
 	virtual HRESULT Init(void) PURE;

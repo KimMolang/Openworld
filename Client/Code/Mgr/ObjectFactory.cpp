@@ -30,6 +30,7 @@ Engine::Object* ObjectFactory::CreateObject(const EObjectID & _eObjectID)
 	switch (_eObjectID)
 	{
 	case EObjectID::OBJECT_ID_TEST :
+		// (001 수정) Create 매크로 만들어 났음
 		pTargetCreated = new TestObject();
 		pTargetCreated->Init();
 		break;
@@ -50,10 +51,3 @@ Engine::Object* ObjectFactory::CreateObject(const EObjectID & _eObjectID)
 	return pTargetCreated;
 }
 
-//template<typename T, typename>
-//T* ObjectFactory::CreateObject()
-//{
-//	T* pTargetCreated = new T();
-//	pTargetCreated->Init();
-//	return pTargetCreated;
-//}
