@@ -65,7 +65,7 @@ void VIBuffer::Render()
 	pDeviceContext->DrawIndexed(m_nIdxNum, m_nIdxStart, m_nIdxPlus);
 }
 
-void VIBuffer::CreateRasterizerState()
+void VIBuffer::InitRasterizerState()
 {
 	D3D11_RASTERIZER_DESC tRasterizerDesc;
 	ZeroMemory(&tRasterizerDesc, sizeof(D3D11_RASTERIZER_DESC));

@@ -47,7 +47,7 @@ protected:
 	SET(Engine::Object::EState, ObjState, m_eObjState);
 
 public :
-	inline void SetWorldMatrix
+	inline virtual void SetWorldMatrix
 	(
 		const D3DXVECTOR3& _vPos = D3DXVECTOR3(0.0f, 0.0f, 0.0f)
 		, const D3DXVECTOR3& _vRadian = D3DXVECTOR3(0.0f, 0.0f, 0.0f)

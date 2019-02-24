@@ -7,9 +7,10 @@
 #include "Export_Function_Mgr.h"
 
 #include "VIBufferCube.h"
-#include "ShaderColor.h"
-
 #include "VIBufferTerrain.h"
+#include "VIBufferPlane.h"
+
+#include "ShaderColor.h"
 #include "ShaderNormal.h"
 
 #include "Texture.h"
@@ -17,6 +18,7 @@
 #include "Object.h"
 
 #include "../Mgr/ObjectFactory.h"
+
 
 SceneTown::SceneTown()
 {
@@ -68,6 +70,14 @@ HRESULT SceneTown::Init()
 		, Engine::ResourceMgr::RESOURCE_TYPE_BUFFER
 		, L"Test_Buffer_Terrain"
 		, pTerrain);
+
+	// (Assignment)
+	Engine::VIBufferPlane* pVIBufferPlane = Engine::VIBufferPlane::Create();
+	Engine::GetResourceMgr()->AddResource(
+		Engine::ResourceMgr::RESOURCE_ATTRI_STATIC
+		, Engine::ResourceMgr::RESOURCE_TYPE_BUFFER
+		, L"Test_Buffer_Plane"
+		, pVIBufferPlane);
 	
 
 	// TestObject
@@ -107,10 +117,23 @@ HRESULT SceneTown::Init()
 		, pCreatedObj);
 
 	// Camera
+	pCreatedObj
+		= ObjectFactory::GetInstance()->CreateObject(ObjectFactory::EObjectID::OBJECT_ID_CAMERA_DYNAMIC);
+	pCreatedObj->SetWorldMatrix(D3DXVECTOR3(-5.0f, 0.0f, -10.0f));
 	Engine::GetObjectMgr()->AddObj(
 		Engine::Scene::ELayerType::LAYER_TYPE_GAMELOGIC
-		, ObjectFactory::GetInstance()->CreateObject(ObjectFactory::EObjectID::OBJECT_ID_CAMERA_DYNAMIC));
+		, pCreatedObj);
 	
+
+	//// (Assignment)
+	//pCreatedObj
+	//	= ObjectFactory::GetInstance()->CreateObject<class AssignmentObject>(); // include 필요해서 안 쓸래
+	pCreatedObj
+		= ObjectFactory::GetInstance()->CreateObject(ObjectFactory::EObjectID::OBJECT_ID_ASSIGNMENT);
+	pCreatedObj->SetWorldMatrix(D3DXVECTOR3(-5.0f, 0.0f, 0.0f));
+	Engine::GetObjectMgr()->AddObj(
+		Engine::Scene::ELayerType::LAYER_TYPE_GAMELOGIC
+		, pCreatedObj);
 
 	return S_OK;
 }

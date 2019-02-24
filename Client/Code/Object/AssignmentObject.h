@@ -2,11 +2,15 @@
 
 #include "Object.h"
 
-class TestObject : public Engine::GameObject
+// (Assignment)
+class AssignmentObject : public Engine::GameObject
 {
+public :
+	CREATE(AssignmentObject)
+protected:
+	explicit AssignmentObject();
 public:
-	explicit TestObject();
-	virtual ~TestObject();
+	virtual ~AssignmentObject();
 
 public:
 	virtual HRESULT					Init();

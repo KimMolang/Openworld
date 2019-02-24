@@ -10,6 +10,8 @@
 #include "CameraDynamic.h"
 #include "../Object/TestTerrain.h"
 
+#include "../Object/AssignmentObject.h"
+
 IMPLEMENT_SINGLETON(ObjectFactory)
 
 
@@ -42,6 +44,10 @@ Engine::Object* ObjectFactory::CreateObject(const EObjectID & _eObjectID)
 	case EObjectID::OBJECT_ID_TERRAIN :
 		pTargetCreated = new TestTerrain();
 		pTargetCreated->Init();
+		break;
+
+	case EObjectID::OBJECT_ID_ASSIGNMENT :
+		pTargetCreated = AssignmentObject::Create();
 		break;
 
 	default :

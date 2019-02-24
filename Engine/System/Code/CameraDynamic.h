@@ -14,9 +14,6 @@ private:
 public:
 	virtual ~CameraDynamic();
 
-public:
-	void SetPos(const D3DXVECTOR3& _vEye) { m_vEye = _vEye; }
-
 
 public:
 	virtual HRESULT			Init();

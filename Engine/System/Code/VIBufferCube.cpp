@@ -30,7 +30,7 @@ HRESULT VIBufferCube::Init()
 	Init_Vtx();
 	Init_Idx();
 
-	VIBuffer::CreateRasterizerState();
+	VIBuffer::InitRasterizerState();
 
 
 	return S_OK;

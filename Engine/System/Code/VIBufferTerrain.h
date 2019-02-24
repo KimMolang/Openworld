@@ -35,7 +35,7 @@ public:
 	virtual void	Update() {};
 	virtual void	Render();
 protected:
-	virtual void	CreateRasterizerState();
+	virtual void	InitRasterizerState();
 protected:
 	virtual void	Release();
 

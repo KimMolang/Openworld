@@ -47,8 +47,8 @@ HRESULT VIBufferTerrain::Init
 	, const char* _Path /*= nullptr*/
 )
 {
-	//VIBuffer::Init();
-	//SetShader(ResourceMgr::EResourceAttribute::RESOURCE_ATTRI_STATIC, L"Test_Shader_Terrain"); 
+	VIBuffer::Init();
+
 
 	if (_Path)
 	{
@@ -60,7 +60,7 @@ HRESULT VIBufferTerrain::Init
 	CHECK_FAILED_MSG_RETURN(Init_Buffer(_iCntX, _iCntY)
 		, L"Failed Function of VITerrainInit_Buffer", E_FAIL);
 
-	CreateRasterizerState();
+	InitRasterizerState();
 
 	return S_OK;
 }
@@ -110,7 +110,7 @@ void VIBufferTerrain::Render()
 	pDeviceContext->DrawIndexed(m_nIdxNum, m_nIdxStart, m_nIdxPlus);
 }
 
-void VIBufferTerrain::CreateRasterizerState()
+void VIBufferTerrain::InitRasterizerState()
 {
 	D3D11_RASTERIZER_DESC tRasterizerDesc;
 	ZeroMemory(&tRasterizerDesc, sizeof(D3D11_RASTERIZER_DESC));

@@ -14,7 +14,7 @@ const D3DXVECTOR3 Camera::m_vUp = D3DXVECTOR3(0.f, 1.f, 0.f);
 Camera::Camera()
 	: Object()
 	, m_vEye(0.f, 0.f, 0.f)
-	, m_vAt(1.f, 0.f, 0.f)
+	, m_vAt(0.f, 0.f, 1.f)
 
 	, m_fFovy(0.f)
 	, m_fAspect(0.f)
@@ -33,6 +33,18 @@ Camera::~Camera()
 {
 	::Safe_Release(m_pViewBuffer);
 	::Safe_Release(m_pProjBuffer);
+}
+
+void Camera::SetWorldMatrix
+(
+	const D3DXVECTOR3& _vPos /*= D3DXVECTOR3(0.0f, 0.0f, 0.0f)*/
+	, const D3DXVECTOR3& _vRadian /*= D3DXVECTOR3(0.0f, 0.0f, 0.0f)*/
+	, const D3DXVECTOR3& _vScale /*= D3DXVECTOR3(1.0f, 1.0f, 1.0f)*/
+)
+{
+	m_vEye = _vPos;
+	m_vAt = m_vEye;
+	m_vAt.z += 1.0f;
 }
 
 void Camera::Init_ViewBuffer()
