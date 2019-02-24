@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "AssignmentObject.h"
 
-#include "ResourceMgr.h"
 #include "Export_Function_Mgr.h"
 
 
@@ -39,6 +38,64 @@ HRESULT AssignmentObject::Init()
 
 Engine::Object::EState AssignmentObject::Update()
 {
+	const float speed = 25;
+	float fTime = Engine::GetTimer()->GetTime();
+
+	bool isMoving = false;
+
+	D3DXVECTOR3 vPos = m_pTransform->GetPos();
+	D3DXVECTOR3 vRadian = m_pTransform->GetRadian();
+
+	D3DXMATRIX matWorld = m_pTransform->GetWorldMatrix();
+	// (수정) (내일) 함수로 다 만들자
+	D3DXVECTOR3 vRight(matWorld._11, matWorld._12, matWorld._13);
+	D3DXVECTOR3 vDir(matWorld._31, matWorld._32, matWorld._33);
+
+	if (Engine::GetKeyChecker()->CheckKeyboardPress(DIK_A))
+	{
+		//vPos.x -= speed * fTime;
+		vPos -= vRight * speed * fTime;
+		isMoving |= true;
+	}
+
+	if (Engine::GetKeyChecker()->CheckKeyboardPress(DIK_D))
+	{
+		//vPos.x += speed * fTime;
+		vPos += vRight * speed * fTime;
+		isMoving |= true;
+	}
+
+	if (Engine::GetKeyChecker()->CheckKeyboardPress(DIK_W))
+	{
+		//vPos.y += speed * fTime;
+		vPos += vDir * speed * fTime;
+		isMoving |= true;
+	}
+
+	if (Engine::GetKeyChecker()->CheckKeyboardPress(DIK_S))
+	{
+		//vPos.y -= speed * fTime;
+		vPos -= vDir * speed * fTime;
+		isMoving |= true;
+	}
+
+	if (Engine::GetKeyChecker()->CheckKeyboardPress(DIK_Q))
+	{
+		vRadian.x += speed * (fTime/3.0f);
+		isMoving |= true;
+	}
+
+	if (Engine::GetKeyChecker()->CheckKeyboardPress(DIK_E))
+	{
+		vRadian.y -= speed * (fTime / 3.0f);
+		isMoving |= true;
+	}
+
+	if (isMoving)
+	{
+		m_pTransform->SetWorldMatrix(vPos, vRadian);
+	}
+
 	return Engine::GameObject::Update();
 }
 

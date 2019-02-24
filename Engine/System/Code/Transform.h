@@ -30,6 +30,13 @@ private:
 	void Init_WorldBuffer();
 
 public:
+	GET_USING_REFERENCE(D3DXVECTOR3, Pos, m_vPos);
+	GET_USING_REFERENCE(D3DXVECTOR3, Dir, m_vDir);
+	GET_USING_REFERENCE(D3DXVECTOR3, Radian, m_vRadian);
+	GET_USING_REFERENCE(D3DXVECTOR3, Scale, m_vScale);
+	GET_USING_REFERENCE(D3DXMATRIX, WorldMatrix, m_matWorld);
+
+	void SetPos(const D3DXVECTOR3& _vPos);
 	void SetWorldMatrix
 	(
 		const D3DXVECTOR3& _vPos

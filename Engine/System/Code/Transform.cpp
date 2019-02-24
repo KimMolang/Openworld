@@ -48,6 +48,13 @@ void Transform::Init_WorldBuffer()
 		m_pGraphicDevice->GetDevice()->CreateBuffer(&tBuffer, nullptr, &m_pWorldBuffer), );
 }
 
+void Transform::SetPos(const D3DXVECTOR3& _vPos)
+{
+	m_vPos = _vPos;
+
+	Update_WorldMatrix();
+}
+
 void Transform::SetWorldMatrix
 (
 	const D3DXVECTOR3& _vPos,

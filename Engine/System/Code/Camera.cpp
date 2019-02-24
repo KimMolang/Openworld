@@ -42,11 +42,14 @@ void Camera::SetWorldMatrix
 	, const D3DXVECTOR3& _vScale /*= D3DXVECTOR3(1.0f, 1.0f, 1.0f)*/
 )
 {
-	// _vRadian;
+	Object::SetWorldMatrix(_vPos, _vRadian, _vScale);
 
-	const D3DXVECTOR3 minusValue = m_vEye - _vPos;
-	m_vEye -= minusValue;
-	m_vAt -= minusValue;
+	// (¼öÁ¤) _vRadian;
+
+	D3DXVECTOR3 vDir = m_pTransform->GetDir();
+	m_vEye = _vPos;
+
+	m_vAt = m_vEye + vDir;
 }
 
 void Camera::Init_ViewBuffer()

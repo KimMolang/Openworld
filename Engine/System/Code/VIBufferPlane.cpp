@@ -40,19 +40,19 @@ void VIBufferPlane::Init_Vtx()
 {
 	VertexTexture pVertex[] =
 	{
-		{ D3DXVECTOR3(-1.f, 1.f, -1.f)
+		{ D3DXVECTOR3(-1.f, 1.f, 0.f)
 		, D3DXVECTOR3(0.f, 1.f, 0.f)
 		, D3DXVECTOR2(0.f, 0.f) },
 
-		{ D3DXVECTOR3(1.f, 1.f, -1.f)
+		{ D3DXVECTOR3(1.f, 1.f, 0.f)
 		, D3DXVECTOR3(0.f, 1.f, 0.f)
 		, D3DXVECTOR2(1.f, 0.f) },
 
-		{ D3DXVECTOR3(1.f, -1.f, -1.f)
+		{ D3DXVECTOR3(1.f, -1.f, 0.f)
 		, D3DXVECTOR3(0.f, 1.f, 0.f)
 		, D3DXVECTOR2(1.f, 1.f) },
 
-		{ D3DXVECTOR3(-1.f, -1.f, -1.f)
+		{ D3DXVECTOR3(-1.f, -1.f, 0.f)
 		, D3DXVECTOR3(0.f, 1.f, 0.f)
 		, D3DXVECTOR2(0.f, 1.f) },
 	};
