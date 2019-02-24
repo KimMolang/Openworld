@@ -19,6 +19,9 @@
 
 #include "../Mgr/ObjectFactory.h"
 
+// (Assignment) 
+#include "../Object/AssignmentFollowingObject.h"
+
 
 SceneTown::SceneTown()
 {
@@ -128,9 +131,17 @@ HRESULT SceneTown::Init()
 	//// (Assignment)
 	//pCreatedObj
 	//	= ObjectFactory::GetInstance()->CreateObject<class AssignmentObject>(); // include 필요해서 안 쓸래
-	pCreatedObj
+	Engine::Object* pTarget = pCreatedObj
 		= ObjectFactory::GetInstance()->CreateObject(ObjectFactory::EObjectID::OBJECT_ID_ASSIGNMENT);
 	pCreatedObj->SetWorldMatrix(D3DXVECTOR3(-5.0f, 0.0f, 0.0f));
+	Engine::GetObjectMgr()->AddObj(
+		Engine::Scene::ELayerType::LAYER_TYPE_GAMELOGIC
+		, pCreatedObj);
+
+	pCreatedObj
+		= ObjectFactory::GetInstance()->CreateObject(ObjectFactory::EObjectID::OBJECT_ID_ASSIGNMENT_FOLLOWING);
+	pCreatedObj->SetWorldMatrix(D3DXVECTOR3(10.0f, 0.0f, 0.0f));
+	static_cast<AssignmentFollowingObject*>(pCreatedObj)->m_pTarget = pTarget;
 	Engine::GetObjectMgr()->AddObj(
 		Engine::Scene::ELayerType::LAYER_TYPE_GAMELOGIC
 		, pCreatedObj);

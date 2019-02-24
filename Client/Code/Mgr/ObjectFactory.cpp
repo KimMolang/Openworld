@@ -11,6 +11,7 @@
 #include "../Object/TestTerrain.h"
 
 #include "../Object/AssignmentObject.h"
+#include "../Object/AssignmentFollowingObject.h"
 
 IMPLEMENT_SINGLETON(ObjectFactory)
 
@@ -48,6 +49,10 @@ Engine::Object* ObjectFactory::CreateObject(const EObjectID & _eObjectID)
 
 	case EObjectID::OBJECT_ID_ASSIGNMENT :
 		pTargetCreated = AssignmentObject::Create();
+		break;
+
+	case EObjectID::OBJECT_ID_ASSIGNMENT_FOLLOWING:
+		pTargetCreated = AssignmentFollowingObject::Create();
 		break;
 
 	default :

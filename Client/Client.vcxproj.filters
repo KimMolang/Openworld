@@ -28,6 +28,9 @@
     <ClCompile Include="Code\Object\AssignmentObject.cpp">
       <Filter>Source Files\04. Object\GameLogic</Filter>
     </ClCompile>
+    <ClCompile Include="Code\Object\AssignmentFollowingObject.cpp">
+      <Filter>Source Files\04. Object\GameLogic</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Client\Code\Basic\Resource.h">
@@ -64,6 +67,9 @@
       <Filter>Source Files\04. Object\Back</Filter>
     </ClInclude>
     <ClInclude Include="Code\Object\AssignmentObject.h">
+      <Filter>Source Files\04. Object\GameLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Object\AssignmentFollowingObject.h">
       <Filter>Source Files\04. Object\GameLogic</Filter>
     </ClInclude>
   </ItemGroup>
