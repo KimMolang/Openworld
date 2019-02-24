@@ -107,11 +107,6 @@ public:
 public :
 	GET(UINT, VtxNum, m_nVtxNum);
 	GET(UINT, IdxNum, m_nIdxNum);
-	//void	SetShader
-	//(
-	//	const ResourceMgr::EResourceAttribute& _eResourceAtrri
-	//	, const std::wstring& _wstrKey
-	//);
 
 public:
 	virtual HRESULT	Init();

@@ -203,6 +203,7 @@
     <ClInclude Include="Code\Transform.h" />
     <ClInclude Include="Code\VIBuffer.h" />
     <ClInclude Include="Code\VIBufferCube.h" />
+    <ClInclude Include="Code\VIBufferPlane.h" />
     <ClInclude Include="Code\VIBufferTerrain.h" />
     <ClInclude Include="Core\TSingleTon.h" />
     <ClInclude Include="stdafx.h" />
@@ -235,6 +236,7 @@
     <ClCompile Include="Code\Transform.cpp" />
     <ClCompile Include="Code\VIBuffer.cpp" />
     <ClCompile Include="Code\VIBufferCube.cpp" />
+    <ClCompile Include="Code\VIBufferPlane.cpp" />
     <ClCompile Include="Code\VIBufferTerrain.cpp" />
     <ClCompile Include="DataStream.cpp" />
     <ClCompile Include="stdafx.cpp">
