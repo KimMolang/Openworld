@@ -3,7 +3,7 @@
 
 // Get & Set
 #define GET(DATATYPE, ARGNAME, MYDATANAME)				\
-inline const DATATYPE Get##ARGNAME() { return MYDATANAME; }
+inline const DATATYPE Get##ARGNAME() const { return MYDATANAME; }
 
 #define SET(DATATYPE, ARGNAME, MYDATANAME)				\
 inline void Set##ARGNAME( const DATATYPE _data ) { MYDATANAME = _data; }	
@@ -13,7 +13,7 @@ GET(DATATYPE, ARGNAME, MYDATANAME)						\
 SET(DATATYPE, ARGNAME, MYDATANAME)
 
 #define GET_USING_REFERENCE(DATATYPE, ARGNAME, MYDATANAME)				\
-inline const DATATYPE& Get##ARGNAME() { return MYDATANAME; }
+inline const DATATYPE& Get##ARGNAME() const { return MYDATANAME; }
 
 #define SET_USING_REFERENCE(DATATYPE, ARGNAME, MYDATANAME)				\
 inline void Set##ARGNAME( const DATATYPE& _data ) { MYDATANAME = _data; }	

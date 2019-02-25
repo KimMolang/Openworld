@@ -54,6 +54,9 @@ public :
 		, const D3DXVECTOR3& _vScale = D3DXVECTOR3(1.0f, 1.0f, 1.0f)
 	);
 
+	const Transform* const GetTransform() const { return m_pTransform; }
+
+
 public :
 	virtual HRESULT			Init();
 protected:
@@ -75,7 +78,7 @@ protected:
 	EState				m_eObjState;
 
 protected:
-	class Transform*	m_pTransform;
+	Transform*	m_pTransform;
 
 	friend class Layer;
 };

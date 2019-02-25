@@ -41,8 +41,7 @@ Engine::Object::EState AssignmentFollowingObject::Update()
 	const float speed = 10;
 	float fTime = Engine::GetTimer()->GetTime();
 
-	// (내일)(수정)아니 왜 겟 트랜스폼 안 됨?!
-	D3DXVECTOR3 vTargetPos = m_pTarget->m_pTransform->GetPos();
+	D3DXVECTOR3 vTargetPos = m_pTarget->GetTransform()->GetPos();
 	D3DXVECTOR3 vPos = m_pTransform->GetPos();
 	D3DXVECTOR3 vRadian = m_pTransform->GetRadian();
 
@@ -52,15 +51,9 @@ Engine::Object::EState AssignmentFollowingObject::Update()
 	vPos += vDir * speed * fTime;
 
 	D3DXVECTOR3 vGapRadian
-		= m_pTarget->m_pTransform->GetRadian() - vRadian;
+		= m_pTarget->GetTransform()->GetRadian() - vRadian;
 
 	vRadian += vGapRadian * (speed/3.0f) * fTime;
-
-	//D3DXMATRIX matWorld = m_pTransform->GetWorldMatrix();
-	//// (수정) (내일) 함수로 다 만들자
-	//D3DXVECTOR3 vRight(matWorld._11, matWorld._12, matWorld._13);
-	//D3DXVECTOR3 vDir(matWorld._31, matWorld._32, matWorld._33);
-
 
 
 	m_pTransform->SetWorldMatrix(vPos, vRadian);
