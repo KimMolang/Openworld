@@ -47,9 +47,8 @@ Engine::Object::EState AssignmentObject::Update()
 	D3DXVECTOR3 vRadian = m_pTransform->GetRadian();
 
 	D3DXMATRIX matWorld = m_pTransform->GetWorldMatrix();
-	// (수정) (내일) 함수로 다 만들자
-	D3DXVECTOR3 vRight(matWorld._11, matWorld._12, matWorld._13);
-	D3DXVECTOR3 vDir(matWorld._31, matWorld._32, matWorld._33);
+	D3DXVECTOR3 vRight = m_pTransform->GetRightVector();
+	D3DXVECTOR3 vDir = m_pTransform->GetDir();
 
 	if (Engine::GetKeyChecker()->CheckKeyboardPress(DIK_A))
 	{
