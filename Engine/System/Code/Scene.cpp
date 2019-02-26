@@ -20,7 +20,7 @@ Scene::Scene()
 
 Scene::~Scene()
 {
-	Release_Layer();
+	Release();
 }
 
 HRESULT Scene::Init()
@@ -49,7 +49,7 @@ void Scene::Render()
 
 void Scene::Release()
 {
-
+	
 }
 
 void Scene::Update_Layer()

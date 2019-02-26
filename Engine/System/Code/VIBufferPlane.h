@@ -18,7 +18,6 @@ public:
 
 public:
 	virtual HRESULT			Init();
-	virtual void			Update() {};
 protected:
 	virtual void	InitRasterizerState();
 

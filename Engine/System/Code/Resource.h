@@ -22,7 +22,7 @@ public:
 	virtual Resource* Clone()	PURE;
 
 	virtual HRESULT	Init()		PURE;
-	virtual void	Update()	PURE;
+	virtual void	Update() {};
 	virtual void	Render()	PURE;
 protected:
 	virtual void	Release();

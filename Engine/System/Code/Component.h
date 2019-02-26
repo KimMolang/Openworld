@@ -41,6 +41,7 @@ public:
 	virtual HRESULT Init(void) PURE;
 	virtual void Update(void) PURE;
 	virtual void Render(void) PURE;
+	virtual void Release(void) PURE;
 };
 
 

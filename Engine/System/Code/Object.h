@@ -23,7 +23,7 @@ public:
 protected:
 	explicit Object(void) = default;
 public:
-	virtual ~Object(void) = default;
+	virtual ~Object(void);
 	// 순수 함수는 단순히 인터페이스 방향만제공하기 때문에 (이런 게 필요합니다!)
 	// 몸체가 필요없지만
 	// 소멸자에 순수 키워드를 붙이면 그 의미가 달라진다.

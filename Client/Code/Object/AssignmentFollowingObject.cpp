@@ -10,7 +10,7 @@ AssignmentFollowingObject::AssignmentFollowingObject()
 
 AssignmentFollowingObject::~AssignmentFollowingObject()
 {
-
+	Release();
 }
 
 HRESULT AssignmentFollowingObject::Init()
@@ -68,5 +68,5 @@ void AssignmentFollowingObject::Render()
 
 void AssignmentFollowingObject::Release()
 {
-	Engine::Object::Release();
+	Engine::GameObject::Release();
 }

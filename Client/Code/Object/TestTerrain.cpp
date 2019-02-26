@@ -10,7 +10,7 @@ TestTerrain::TestTerrain()
 
 TestTerrain::~TestTerrain()
 {
-
+	Release();
 }
 
 HRESULT TestTerrain::Init()

@@ -11,6 +11,11 @@
 BEGIN(Engine)
 
 // 1) Object =================================
+Object::~Object()
+{
+	Release();
+}
+
 void Object::SetWorldMatrix
 (
 	const D3DXVECTOR3& _vPos /*= D3DXVECTOR3(0.0f, 0.0f, 0.0f)*/

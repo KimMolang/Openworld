@@ -121,6 +121,8 @@ void VIBufferTerrain::InitRasterizerState()
 
 void VIBufferTerrain::Release()
 {
+	VIBuffer::Release();
+
 	if (m_pRefCnt == nullptr)
 	{
 		::Safe_Delete_Array(m_pHeightMapTypeInfoArray);

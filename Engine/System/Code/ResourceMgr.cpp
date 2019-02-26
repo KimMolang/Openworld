@@ -22,19 +22,18 @@
 BEGIN(Engine)
 
 
-IMPLEMENT_SINGLETON_INIT_AND_RELEASE(ResourceMgr)
+IMPLEMENT_SINGLETON(ResourceMgr)
 
 
 ResourceMgr::ResourceMgr()
 	: m_pComponentNull(nullptr)
 {
-
+	Init();
 }
 
 ResourceMgr::~ResourceMgr()
 {
-	Release_AllResource();
-	Release_ComponentNull();
+	Release();
 }
 
 HRESULT ResourceMgr::AddResource
@@ -128,6 +127,7 @@ HRESULT ResourceMgr::Init()
 
 void ResourceMgr::Release()
 {
+	Release_AllResource();
 	Release_ComponentNull();
 }
 

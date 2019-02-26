@@ -57,7 +57,7 @@ void CameraStatic::Render()
 
 void CameraStatic::Release()
 {
-
+	Camera::Release();
 }
 
 void CameraStatic::CheckKey()

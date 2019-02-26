@@ -23,6 +23,7 @@ QuadTree::QuadTree(const QuadTree & other)
 
 QuadTree::~QuadTree()
 {
+	Release();
 }
 
 void QuadTree::Initialize(VIBufferTerrain * _pTerrain)

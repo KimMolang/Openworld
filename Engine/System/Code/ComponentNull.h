@@ -16,6 +16,7 @@ public:
 	virtual HRESULT	Init() { return S_OK; }
 	virtual void Update(void) {};
 	virtual void Render(void) {};
+	virtual void Release(void) {};
 
 
 friend ResourceMgr; // ResourceMgr 에서만 생성 가능합니다.

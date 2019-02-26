@@ -44,6 +44,8 @@ void Material::Update()
 
 void Material::Release()
 {
+	Component::Release();
+
 	m_pShader = m_pTexture = nullptr;
 }
 

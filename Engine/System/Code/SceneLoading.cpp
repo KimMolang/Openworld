@@ -16,7 +16,7 @@ SceneLoading::SceneLoading()
 
 SceneLoading::~SceneLoading()
 {
-
+	Release();
 }
 
 unsigned int SceneLoading::StartLoading(void * _pArg)
@@ -82,7 +82,7 @@ void SceneLoading::Render()
 
 void SceneLoading::Release()
 {
-
+	Scene::Release();
 }
 
 

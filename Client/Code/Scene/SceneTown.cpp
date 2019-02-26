@@ -29,6 +29,7 @@ SceneTown::SceneTown()
 
 SceneTown::~SceneTown()
 {
+	Release();
 }
 
 HRESULT SceneTown::Init()
@@ -161,5 +162,5 @@ void SceneTown::Render()
 
 void SceneTown::Release()
 {
-	Engine::Scene::Release();
+	Scene::Release();
 }

@@ -17,6 +17,8 @@ Resource::~Resource()
 
 void Resource::Release()
 {
+	Component::Release();
+
 	if ((*m_pRefCnt) == 0)
 	{
 		Release_RefCnt();
@@ -27,7 +29,6 @@ void Resource::Release()
 void Resource::Release_RefCnt()
 {
 	::Safe_Delete(m_pRefCnt);
-
 }
 
 

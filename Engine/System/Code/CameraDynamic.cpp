@@ -43,7 +43,7 @@ void CameraDynamic::Render()
 
 void CameraDynamic::Release()
 {
-
+	Camera::Release();
 }
 
 void CameraDynamic::CheckKey()

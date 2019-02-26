@@ -114,6 +114,8 @@ void Transform::Render()
 
 void Transform::Release()
 {
+	Component::Release();
+
 	::Safe_Release(m_pWorldBuffer);
 }
 

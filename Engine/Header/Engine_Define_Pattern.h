@@ -33,22 +33,22 @@
 		}											\
 	}
 
-#define IMPLEMENT_SINGLETON_INIT_AND_RELEASE(CLASSNAME)	\
-	CLASSNAME*	CLASSNAME::m_pInstance = nullptr;	\
-	CLASSNAME*	CLASSNAME::GetInstance( void )	{	\
-		if(NULL == m_pInstance) {					\
-			m_pInstance = new CLASSNAME;			\
-			m_pInstance->Init();					\
-		}											\
-		return m_pInstance;							\
-	}												\
-	void CLASSNAME::DestroyInstance( void ) {		\
-		if(nullptr != m_pInstance)	{				\
-			m_pInstance->Release();					\
-			delete m_pInstance;						\
-			m_pInstance = nullptr;					\
-		}											\
-	}
+//#define IMPLEMENT_SINGLETON_INIT_AND_RELEASE(CLASSNAME)	\
+//	CLASSNAME*	CLASSNAME::m_pInstance = nullptr;	\
+//	CLASSNAME*	CLASSNAME::GetInstance( void )	{	\
+//		if(NULL == m_pInstance) {					\
+//			m_pInstance = new CLASSNAME;			\
+//			m_pInstance->Init();					\
+//		}											\
+//		return m_pInstance;							\
+//	}												\
+//	void CLASSNAME::DestroyInstance( void ) {		\
+//		if(nullptr != m_pInstance)	{				\
+//			m_pInstance->Release();					\
+//			delete m_pInstance;						\
+//			m_pInstance = nullptr;					\
+//		}											\
+//	}
 
 
 

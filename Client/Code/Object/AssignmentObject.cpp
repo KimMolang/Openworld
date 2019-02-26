@@ -10,7 +10,7 @@ AssignmentObject::AssignmentObject()
 
 AssignmentObject::~AssignmentObject()
 {
-
+	Release();
 }
 
 HRESULT AssignmentObject::Init()
@@ -105,5 +105,5 @@ void AssignmentObject::Render()
 
 void AssignmentObject::Release()
 {
-	Engine::Object::Release();
+	Engine::GameObject::Release();
 }

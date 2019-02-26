@@ -22,7 +22,7 @@ MainGame::MainGame()
 
 MainGame::~MainGame()
 {
-	
+	Release();
 }
 
 HRESULT MainGame::Init()

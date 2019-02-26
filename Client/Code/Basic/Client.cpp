@@ -66,7 +66,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 		}
 	}   
 
-	::Safe_Release(pMainGame);
+	::Safe_Delete(pMainGame);
 
 
     return (int) msg.wParam;

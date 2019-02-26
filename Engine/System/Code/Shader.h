@@ -45,7 +45,6 @@ public:
 public:
 	virtual HRESULT	Init();
 	virtual void	Render();
-	virtual void	Update() {};
 private:
 	void			Release();
 

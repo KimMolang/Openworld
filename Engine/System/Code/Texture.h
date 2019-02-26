@@ -30,7 +30,6 @@ private:
 
 public:
 	virtual HRESULT			Init();
-	virtual void			Update();
 	virtual void			Render();
 private:
 	virtual void			Release();

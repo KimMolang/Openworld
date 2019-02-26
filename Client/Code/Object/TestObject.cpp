@@ -10,7 +10,7 @@ TestObject::TestObject()
 
 TestObject::~TestObject()
 {
-
+	Release();
 }
 
 HRESULT TestObject::Init()
@@ -48,5 +48,5 @@ void TestObject::Render()
 
 void TestObject::Release()
 {
-	Engine::Object::Release();
+	Engine::GameObject::Release();
 }

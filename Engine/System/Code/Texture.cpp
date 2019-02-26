@@ -24,7 +24,7 @@ Texture::Texture()
 
 Texture::~Texture()
 {
-	
+	Release();
 }
 
 HRESULT Texture::Load(std::wstring _wstrPath, const ETextureType& _eTextureType)
@@ -99,11 +99,6 @@ void Texture::Load_DDS(std::wstring _wstrPath)
 HRESULT Texture::Init()
 {
 	return S_OK;
-}
-
-void Texture::Update()
-{
-
 }
 
 void Texture::Render()
