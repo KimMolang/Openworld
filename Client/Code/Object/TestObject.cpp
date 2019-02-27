@@ -25,7 +25,7 @@ HRESULT TestObject::Init()
 		Engine::ResourceMgr::RESOURCE_ATTRI_STATIC, Engine::ResourceMgr::RESOURCE_TYPE_SHADER, L"Test_Shader_Color");
 	CHECK_NULLPTR_RETURN(pShader, E_FAIL);
 
-	static_cast<Engine::Material*>(m_pMaterial)->SetMaterial(pShader);
+	static_cast<Engine::Material*>(m_pMaterial)->SetShader(pShader);
 
 	// Model Buffer ---------------------
 	m_pMeshBuffer = Engine::GetResourceMgr()->CloneResource(

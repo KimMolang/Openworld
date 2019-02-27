@@ -172,6 +172,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\Header\Singleton.h" />
     <ClInclude Include="Code\Camera.h" />
     <ClInclude Include="Code\CameraDynamic.h" />
     <ClInclude Include="Code\CameraNull.h" />

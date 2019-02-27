@@ -11,16 +11,28 @@ Material::~Material()
 	Release();
 }
 
-void Material::SetMaterial
-(
-	Engine::Component* _pShader
-	, Engine::Component* _pTextrue /* = nullptr */
-)
+void Material::SetShader( Engine::Component* _pShader)
 {
 	Component* pComponentNull = ResourceMgr::GetInstance()->GetComponentNull();
 
 	m_pShader = (_pShader == nullptr) ? pComponentNull : _pShader;
-	m_pTexture = (_pTextrue == nullptr) ? pComponentNull : _pTextrue;
+}
+
+void Material::SetTexture(Engine::Component* _pTexture)
+{
+	Component* pComponentNull = ResourceMgr::GetInstance()->GetComponentNull();
+
+	m_pTexture = (_pTexture == nullptr) ? pComponentNull : _pTexture;
+}
+
+void Material::SetMaterial
+(
+	Engine::Component* _pShader
+	, Engine::Component* _pTexture
+)
+{
+	SetShader(_pShader);
+	SetTexture(_pTexture);
 }
 
 HRESULT Material::Init()

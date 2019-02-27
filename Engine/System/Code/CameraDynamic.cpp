@@ -56,89 +56,87 @@ void CameraDynamic::CheckKey()
 
 void CameraDynamic::CheckKey_Move(float _fTime)
 {
-	// (Assignment)
-	//if (GetKeyChecker()->CheckKeyboardPress(DIK_A))
-	//{
-	//	D3DXVECTOR3		vRight;
-	//	D3DXMATRIX		matCamState;
+	if (GetKeyChecker()->CheckKeyboardPress(DIK_A))
+	{
+		D3DXVECTOR3		vRight;
+		D3DXMATRIX		matCamState;
 
-	//	D3DXMatrixInverse(&matCamState, NULL, &m_matView);
-	//	memcpy(&vRight, &matCamState.m[0][0], sizeof(D3DXVECTOR3));
-	//	D3DXVec3Normalize(&vRight, &vRight);
+		D3DXMatrixInverse(&matCamState, NULL, &m_matView);
+		memcpy(&vRight, &matCamState.m[0][0], sizeof(D3DXVECTOR3));
+		D3DXVec3Normalize(&vRight, &vRight);
 
-	//	m_vEye -= vRight * m_fSpeed * _fTime;
-	//	m_vAt -= vRight * m_fSpeed * _fTime;
-	//}
+		m_vEye -= vRight * m_fSpeed * _fTime;
+		m_vAt -= vRight * m_fSpeed * _fTime;
+	}
 
-	//if (GetKeyChecker()->CheckKeyboardPress(DIK_D))
-	//{
-	//	D3DXVECTOR3		vRight;
-	//	D3DXMATRIX		matCamState;
+	if (GetKeyChecker()->CheckKeyboardPress(DIK_D))
+	{
+		D3DXVECTOR3		vRight;
+		D3DXMATRIX		matCamState;
 
-	//	D3DXMatrixInverse(&matCamState, NULL, &m_matView);
-	//	memcpy(&vRight, &matCamState.m[0][0], sizeof(D3DXVECTOR3));
-	//	D3DXVec3Normalize(&vRight, &vRight);
+		D3DXMatrixInverse(&matCamState, NULL, &m_matView);
+		memcpy(&vRight, &matCamState.m[0][0], sizeof(D3DXVECTOR3));
+		D3DXVec3Normalize(&vRight, &vRight);
 
-	//	m_vEye += vRight * m_fSpeed * _fTime;
-	//	m_vAt += vRight * m_fSpeed * _fTime;
-	//}
+		m_vEye += vRight * m_fSpeed * _fTime;
+		m_vAt += vRight * m_fSpeed * _fTime;
+	}
 
-	//if (GetKeyChecker()->CheckKeyboardPress(DIK_W))
-	//{
-	//	D3DXVECTOR3		vLook;
-	//	vLook = m_vAt - m_vEye;
-	//	D3DXVec3Normalize(&vLook, &vLook);
+	if (GetKeyChecker()->CheckKeyboardPress(DIK_W))
+	{
+		D3DXVECTOR3		vLook;
+		vLook = m_vAt - m_vEye;
+		D3DXVec3Normalize(&vLook, &vLook);
 
-	//	m_vEye += vLook * m_fSpeed * _fTime;
-	//	m_vAt += vLook * m_fSpeed * _fTime;
-	//}
+		m_vEye += vLook * m_fSpeed * _fTime;
+		m_vAt += vLook * m_fSpeed * _fTime;
+	}
 
-	//if (GetKeyChecker()->CheckKeyboardPress(DIK_S))
-	//{
-	//	D3DXVECTOR3		vLook;
-	//	vLook = m_vAt - m_vEye;
-	//	D3DXVec3Normalize(&vLook, &vLook);
+	if (GetKeyChecker()->CheckKeyboardPress(DIK_S))
+	{
+		D3DXVECTOR3		vLook;
+		vLook = m_vAt - m_vEye;
+		D3DXVec3Normalize(&vLook, &vLook);
 
-	//	m_vEye -= vLook * m_fSpeed * _fTime;
-	//	m_vAt -= vLook * m_fSpeed * _fTime;
-	//}
+		m_vEye -= vLook * m_fSpeed * _fTime;
+		m_vAt -= vLook * m_fSpeed * _fTime;
+	}
 }
 
 void CameraDynamic::CheckKey_Rotate(float _fTime)
 {
-	// (Assignment)
-	//int		iDistance = 0;
+	int		iDistance = 0;
 
-	//if (iDistance = GetKeyChecker()->GetDIMouseMove(KeyChecker::MOUSE_MOVE_X))
-	//{
-	//	D3DXMATRIX		matAxis;
-	//	D3DXMatrixRotationY(&matAxis, (float)D3DXToRadian(iDistance / 10.f));
+	if (iDistance = GetKeyChecker()->GetDIMouseMove(KeyChecker::MOUSE_MOVE_X))
+	{
+		D3DXMATRIX		matAxis;
+		D3DXMatrixRotationY(&matAxis, (float)D3DXToRadian(iDistance / 10.f));
 
-	//	D3DXVECTOR3		vDir;
-	//	vDir = m_vAt - m_vEye;
-	//	D3DXVec3TransformNormal(&vDir, &vDir, &matAxis);
+		D3DXVECTOR3		vDir;
+		vDir = m_vAt - m_vEye;
+		D3DXVec3TransformNormal(&vDir, &vDir, &matAxis);
 
-	//	m_vAt = m_vEye + vDir;
-	//}
+		m_vAt = m_vEye + vDir;
+	}
 
-	//if (iDistance = GetKeyChecker()->GetDIMouseMove(KeyChecker::MOUSE_MOVE_Y))
-	//{
-	//	D3DXVECTOR3		vRight;
-	//	D3DXMATRIX		matViewInverse;
+	if (iDistance = GetKeyChecker()->GetDIMouseMove(KeyChecker::MOUSE_MOVE_Y))
+	{
+		D3DXVECTOR3		vRight;
+		D3DXMATRIX		matViewInverse;
 
-	//	D3DXMatrixInverse(&matViewInverse, NULL, &m_matView);
-	//	memcpy(&vRight, &matViewInverse.m[0][0], sizeof(D3DXVECTOR3));
-	//	D3DXVec3Normalize(&vRight, &vRight);
+		D3DXMatrixInverse(&matViewInverse, NULL, &m_matView);
+		memcpy(&vRight, &matViewInverse.m[0][0], sizeof(D3DXVECTOR3));
+		D3DXVec3Normalize(&vRight, &vRight);
 
-	//	D3DXMATRIX		matAxis;
-	//	D3DXMatrixRotationAxis(&matAxis, &vRight, (float)D3DXToRadian(iDistance / 10.f));
+		D3DXMATRIX		matAxis;
+		D3DXMatrixRotationAxis(&matAxis, &vRight, (float)D3DXToRadian(iDistance / 10.f));
 
-	//	D3DXVECTOR3		vDir;
-	//	vDir = m_vAt - m_vEye;
-	//	D3DXVec3TransformNormal(&vDir, &vDir, &matAxis);
+		D3DXVECTOR3		vDir;
+		vDir = m_vAt - m_vEye;
+		D3DXVec3TransformNormal(&vDir, &vDir, &matAxis);
 
-	//	m_vAt = m_vEye + vDir;
-	//}
+		m_vAt = m_vEye + vDir;
+	}
 }
 
 //void CameraDynamic::FixMouse()

@@ -16,11 +16,9 @@ protected:
 public:
 	virtual ~Material();
 
-	void SetMaterial
-	(
-		Engine::Component* _pShader
-		, Engine::Component* _pTextrue = nullptr
-	);
+	void SetShader(Engine::Component* _pShader);
+	void SetTexture(Engine::Component* _pTexture);
+	void SetMaterial(Engine::Component* _pShader, Engine::Component* _pTexture);
 
 public:
 	virtual HRESULT	Init();
