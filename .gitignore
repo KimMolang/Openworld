@@ -16,5 +16,6 @@
 *.db-shm
 *.db-wal
 *.dll
+*.suo
 /Reference/Header/Engine
 /Reference/Library/Engine/x64/System.lib
