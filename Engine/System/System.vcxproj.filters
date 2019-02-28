@@ -147,9 +147,6 @@
     <ClInclude Include="Code\Transform.h">
       <Filter>소스 파일\04.Component\Transform</Filter>
     </ClInclude>
-    <ClInclude Include="Core\TSingleTon.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="Code\SceneLoading.h">
       <Filter>소스 파일\01.Scene</Filter>
     </ClInclude>
@@ -179,6 +176,9 @@
     </ClInclude>
     <ClInclude Include="..\Header\Singleton.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\VIBufferModel.h">
+      <Filter>소스 파일\04.Component\Resource\VIBuffer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -271,6 +271,9 @@
     </ClCompile>
     <ClCompile Include="Code\Material.cpp">
       <Filter>소스 파일\04.Component\Material</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\VIBufferModel.cpp">
+      <Filter>소스 파일\04.Component\Resource\VIBuffer</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -8,8 +8,8 @@ BEGIN(Engine)
 class ENGINE_DLL VIBufferCube : public VIBuffer
 {
 public:
-	CREATE(Engine::VIBufferCube)
-	CLONE(VIBufferCube)
+	CREATE(Engine::VIBufferCube);
+	CLONE(VIBufferCube);
 private:
 	explicit VIBufferCube();
 public:
