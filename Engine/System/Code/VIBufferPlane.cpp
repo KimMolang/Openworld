@@ -11,7 +11,7 @@ VIBufferPlane::VIBufferPlane()
 
 VIBufferPlane::~VIBufferPlane()
 {
-	
+	Release();
 }
 
 HRESULT VIBufferPlane::Init()
@@ -103,6 +103,12 @@ void VIBufferPlane::InitRasterizerState()
 	tRasterizerDesc.CullMode = D3D11_CULL_NONE;
 	tRasterizerDesc.FillMode = D3D11_FILL_SOLID;
 	GraphicDevice::GetInstance()->GetDevice()->CreateRasterizerState(&tRasterizerDesc, &m_pRasterizerState);
+}
+
+
+void VIBufferPlane::Release()
+{
+	VIBuffer::Release();
 }
 
 

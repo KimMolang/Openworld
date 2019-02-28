@@ -75,29 +75,29 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>.\bin\{out}\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>.\bin\{in}\$(Platform)\$(Configuration)\</IntDir>
-    <IncludePath>..\..\Reference\Header\dx;..\..\Reference\Header\fbxsdk;..\Header;$(IncludePath)</IncludePath>
-    <LibraryPath>..\..\Reference\Library\dx\x64;..\..\Reference\Library\fontWrapper;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\..\Reference\Header\dx;..\..\Reference\Header\;..\Header;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\Reference\Library\dx\x64;..\..\Reference\Library\fontWrapper;..\..\Reference\Library\fbxsdk;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>.\bin\{out}\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>.\bin\{in}\$(Platform)\$(Configuration)\</IntDir>
-    <IncludePath>..\..\Reference\Header\dx;..\..\Reference\Header\fbxsdk;..\Header;$(IncludePath)</IncludePath>
-    <LibraryPath>..\..\Reference\Library\dx\x86;..\..\Reference\Library\fontWrapper;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\..\Reference\Header\dx;..\..\Reference\Header\;..\Header;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\Reference\Library\dx\x86;..\..\Reference\Library\fontWrapper;..\..\Reference\Library\fbxsdk;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>.\bin\{out}\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>.\bin\{in}\$(Platform)\$(Configuration)\</IntDir>
-    <IncludePath>..\..\Reference\Header\dx;..\..\Reference\Header\fbxsdk;..\Header;$(IncludePath)</IncludePath>
-    <LibraryPath>..\..\Reference\Library\dx\x86;..\..\Reference\Library\fontWrapper;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\..\Reference\Header\dx;..\..\Reference\Header\;..\Header;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\Reference\Library\dx\x86;..\..\Reference\Library\fontWrapper;..\..\Reference\Library\fbxsdk;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>.\bin\{out}\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>.\bin\{in}\$(Platform)\$(Configuration)\</IntDir>
-    <IncludePath>..\..\Reference\Header\dx;..\..\Reference\Header\fbxsdk;..\Header;$(IncludePath)</IncludePath>
-    <LibraryPath>..\..\Reference\Library\dx\x64;..\..\Reference\Library\fontWrapper;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\..\Reference\Header\dx;..\..\Reference\Header\;..\Header;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\Reference\Library\dx\x64;..\..\Reference\Library\fontWrapper;..\..\Reference\Library\fbxsdk;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -205,6 +205,7 @@
     <ClInclude Include="Code\VIBuffer.h" />
     <ClInclude Include="Code\VIBufferCube.h" />
     <ClInclude Include="Code\VIBufferModel.h" />
+    <ClInclude Include="Code\VIBufferModelStatic.h" />
     <ClInclude Include="Code\VIBufferPlane.h" />
     <ClInclude Include="Code\VIBufferTerrain.h" />
     <ClInclude Include="stdafx.h" />
@@ -238,6 +239,7 @@
     <ClCompile Include="Code\VIBuffer.cpp" />
     <ClCompile Include="Code\VIBufferCube.cpp" />
     <ClCompile Include="Code\VIBufferModel.cpp" />
+    <ClCompile Include="Code\VIBufferModelStatic.cpp" />
     <ClCompile Include="Code\VIBufferPlane.cpp" />
     <ClCompile Include="Code\VIBufferTerrain.cpp" />
     <ClCompile Include="DataStream.cpp" />

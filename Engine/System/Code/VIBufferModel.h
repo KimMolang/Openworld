@@ -15,9 +15,10 @@ public:
 
 public:
 	virtual void		Render();
-
 protected:
 	virtual void		InitRasterizerState();
+protected:
+	virtual void		Release();
 
 protected:
 	void MakeVertexNormal(BYTE* _pVertices, WORD* _pIndices);

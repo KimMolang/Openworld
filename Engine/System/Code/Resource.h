@@ -11,6 +11,7 @@ virtual TYPE* Clone()		\
 	return new TYPE(*this);	\
 }
 
+// TODO : 소멸자, Release() 함수 확인할 것
 class ENGINE_DLL Resource abstract : public Component
 {
 protected:
@@ -25,7 +26,7 @@ public:
 	virtual void	Update() {};
 	virtual void	Render()	PURE;
 protected:
-	virtual void	Release();
+	virtual void	Release()	PURE;
 
 private:
 	void Release_RefCnt();

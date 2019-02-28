@@ -67,6 +67,9 @@
     <Filter Include="소스 파일\04.Component\Material">
       <UniqueIdentifier>{57161ddf-b2ba-4679-8266-c21ee5e216d2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\04.Component\Resource\VIBuffer\VIBufferModel">
+      <UniqueIdentifier>{28e4816d-dcdf-459c-a7c7-fa6a9a0f5b74}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -177,8 +180,11 @@
     <ClInclude Include="..\Header\Singleton.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Code\VIBufferModelStatic.h">
+      <Filter>소스 파일\04.Component\Resource\VIBuffer\VIBufferModel</Filter>
+    </ClInclude>
     <ClInclude Include="Code\VIBufferModel.h">
-      <Filter>소스 파일\04.Component\Resource\VIBuffer</Filter>
+      <Filter>소스 파일\04.Component\Resource\VIBuffer\VIBufferModel</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -272,8 +278,11 @@
     <ClCompile Include="Code\Material.cpp">
       <Filter>소스 파일\04.Component\Material</Filter>
     </ClCompile>
+    <ClCompile Include="Code\VIBufferModelStatic.cpp">
+      <Filter>소스 파일\04.Component\Resource\VIBuffer\VIBufferModel</Filter>
+    </ClCompile>
     <ClCompile Include="Code\VIBufferModel.cpp">
-      <Filter>소스 파일\04.Component\Resource\VIBuffer</Filter>
+      <Filter>소스 파일\04.Component\Resource\VIBuffer\VIBufferModel</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

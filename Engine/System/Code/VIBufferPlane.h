@@ -20,6 +20,8 @@ public:
 	virtual HRESULT			Init();
 protected:
 	virtual void	InitRasterizerState();
+protected:
+	virtual void			Release();
 
 
 private:

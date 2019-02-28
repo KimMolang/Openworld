@@ -11,22 +11,19 @@ public :
 	enum ETextureType { TEXTURE_TYPE_BASIC, TEXTURE_TYPE_DDS };
 
 public :
-	static Texture* Create
-	(
-		std::wstring _wtrPath
-		, const ETextureType& _eTextureType
-	);
+	CREATE(Engine::Texture);
 	CLONE(Texture)
 private:
-	Texture();
+	Texture() = default;
 public:
 	virtual ~Texture();
 
 
+public:
+	HRESULT		LoadTexture(std::wstring _wstrPath, const ETextureType& _eTextureType);
 private:
-	HRESULT		Load(std::wstring _wstrPath, const ETextureType& _eTextureType);
-	void		Load_Basic(std::wstring _wstrPath);
-	void		Load_DDS(std::wstring _wstrPath);
+	void		LoadTexture_Basic(std::wstring _wstrPath);
+	void		LoadTexture_DDS(std::wstring _wstrPath);
 
 public:
 	virtual HRESULT			Init();

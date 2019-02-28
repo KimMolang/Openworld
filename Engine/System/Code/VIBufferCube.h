@@ -18,7 +18,8 @@ public:
 
 public:
 	virtual HRESULT			Init();
-
+protected:
+	virtual void			Release();
 
 private:
 	void			Init_Vtx();

@@ -8,31 +8,17 @@
 BEGIN(Engine)
 
 
-Texture * Texture::Create(std::wstring _wstrPath, const ETextureType & _eTextureType)
-{
-	Texture* pComponent = new Texture();
-	if (FAILED(pComponent->Load(_wstrPath, _eTextureType)))
-		::Safe_Delete(pComponent);
-
-	return pComponent;
-}
-
-Texture::Texture()
-{
-
-}
-
 Texture::~Texture()
 {
 	Release();
 }
 
-HRESULT Texture::Load(std::wstring _wstrPath, const ETextureType& _eTextureType)
+HRESULT Texture::LoadTexture(std::wstring _wstrPath, const ETextureType& _eTextureType)
 {
 	switch (_eTextureType)
 	{
-	case TEXTURE_TYPE_BASIC:	Load_Basic(_wstrPath);	break;
-	case TEXTURE_TYPE_DDS:		Load_DDS(_wstrPath);	break;
+	case TEXTURE_TYPE_BASIC:	LoadTexture_Basic(_wstrPath);	break;
+	case TEXTURE_TYPE_DDS:		LoadTexture_DDS(_wstrPath);	break;
 
 	default: return E_FAIL;
 	}
@@ -41,7 +27,7 @@ HRESULT Texture::Load(std::wstring _wstrPath, const ETextureType& _eTextureType)
 	return S_OK;
 }
 
-void Texture::Load_Basic(std::wstring _wstrPath)
+void Texture::LoadTexture_Basic(std::wstring _wstrPath)
 {
 	D3DX11CreateShaderResourceViewFromFile(
 		GraphicDevice::GetInstance()->GetDevice(), _wstrPath.c_str(), NULL, NULL, &m_pTextures, NULL);
@@ -60,7 +46,7 @@ void Texture::Load_Basic(std::wstring _wstrPath)
 	GraphicDevice::GetInstance()->GetDevice()->CreateSamplerState(&tData, &m_pSamplerStates);
 }
 
-void Texture::Load_DDS(std::wstring _wstrPath)
+void Texture::LoadTexture_DDS(std::wstring _wstrPath)
 {
 	D3DX11_IMAGE_LOAD_INFO tLoadInfo;
 	tLoadInfo.MiscFlags = D3D11_RESOURCE_MISC_TEXTURECUBE;

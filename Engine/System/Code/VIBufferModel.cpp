@@ -3,9 +3,7 @@
 
 #include "ResourceMgr.h"
 
-
 BEGIN(Engine)
-
 
 
 VIBufferModel::~VIBufferModel()
@@ -97,6 +95,11 @@ D3DXVECTOR3 VIBufferModel::GetTriAngleNormal(BYTE* _pVertices, USHORT _nIndex_0,
 	D3DXVec3Normalize(&vNormal, &vNormal);
 
 	return vNormal;
+}
+
+void VIBufferModel::Release()
+{
+	VIBuffer::Release();
 }
 
 

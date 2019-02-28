@@ -72,28 +72,28 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>.\bin\{out}\$(Platform)\$(Configuration)\</OutDir>
-    <IncludePath>..\Reference\Header\dx;..\Reference\Header\fbxsdk;..\Reference\Header\Engine;.\Code\Header;$(IncludePath)</IncludePath>
-    <LibraryPath>..\Reference\Library\dx\$(Platform);..\Reference\Library\fontWrapper;..\Reference\Library\Engine\$(Platform);$(LibraryPath)</LibraryPath>
+    <IncludePath>..\Reference\Header\dx;..\Reference\Header\;..\Reference\Header\Engine;.\Code\Header;$(IncludePath)</IncludePath>
+    <LibraryPath>..\Reference\Library\dx\$(Platform);..\Reference\Library\fontWrapper;..\Reference\Library\Engine\$(Platform);..\..\Reference\Library\fbxsdk;$(LibraryPath)</LibraryPath>
     <IntDir>.\bin\{in}\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>..\Reference\Header\dx;..\Reference\Header\fbxsdk;..\Reference\Header\Engine;.\Code\Header;$(IncludePath)</IncludePath>
-    <LibraryPath>..\Reference\Library\dx\$(Platform);..\Reference\Library\fontWrapper;..\Reference\Library\Engine\$(Platform);$(LibraryPath)</LibraryPath>
+    <IncludePath>..\Reference\Header\dx;..\Reference\Header\;..\Reference\Header\Engine;.\Code\Header;$(IncludePath)</IncludePath>
+    <LibraryPath>..\Reference\Library\dx\$(Platform);..\Reference\Library\fontWrapper;..\Reference\Library\Engine\$(Platform);..\..\Reference\Library\fbxsdk;$(LibraryPath)</LibraryPath>
     <OutDir>.\bin\{out}\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>.\bin\{in}\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>.\bin\{out}\$(Platform)\$(Configuration)\</OutDir>
-    <IncludePath>..\Reference\Header\dx;..\Reference\Header\fbxsdk;..\Reference\Header\Engine;.\Code\Header;$(IncludePath)</IncludePath>
-    <LibraryPath>..\Reference\Library\dx\$(Platform);..\Reference\Library\fontWrapper;..\Reference\Library\Engine\$(Platform);$(LibraryPath)</LibraryPath>
+    <IncludePath>..\Reference\Header\dx;..\Reference\Header\;..\Reference\Header\Engine;.\Code\Header;$(IncludePath)</IncludePath>
+    <LibraryPath>..\Reference\Library\dx\$(Platform);..\Reference\Library\fontWrapper;..\Reference\Library\Engine\$(Platform);..\..\Reference\Library\fbxsdk;$(LibraryPath)</LibraryPath>
     <IntDir>.\bin\{in}\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>..\Reference\Header\dx;..\Reference\Header\fbxsdk;..\Reference\Header\Engine;.\Code\Header;$(IncludePath)</IncludePath>
-    <LibraryPath>..\Reference\Library\dx\$(Platform);..\Reference\Library\fontWrapper;..\Reference\Library\Engine\$(Platform);$(LibraryPath)</LibraryPath>
+    <IncludePath>..\Reference\Header\dx;..\Reference\Header\;..\Reference\Header\Engine;.\Code\Header;$(IncludePath)</IncludePath>
+    <LibraryPath>..\Reference\Library\dx\$(Platform);..\Reference\Library\fontWrapper;..\Reference\Library\Engine\$(Platform);..\..\Reference\Library\fbxsdk;$(LibraryPath)</LibraryPath>
     <OutDir>.\bin\{out}\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>.\bin\{in}\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>

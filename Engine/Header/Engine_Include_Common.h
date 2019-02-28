@@ -47,6 +47,11 @@
 #pragma  comment(lib, "d3dx11.lib")
 #endif
 
+
+// FBX --------------
+#include <fbxsdk.h>
+#pragma  comment(lib, "libfbxsdk-md.lib")
+
 // Header
 #include "Engine_Value_Common.h"
 

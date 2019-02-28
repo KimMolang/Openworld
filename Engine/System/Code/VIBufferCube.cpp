@@ -11,7 +11,7 @@ VIBufferCube::VIBufferCube()
 
 VIBufferCube::~VIBufferCube()
 {
-	
+	Release();
 }
 
 HRESULT VIBufferCube::Init()
@@ -123,6 +123,11 @@ void VIBufferCube::Init_Idx()
 	tData.pSysMem = pIdx;
 	CHECK_FAILED_RETURN(
 		GraphicDevice::GetInstance()->GetDevice()->CreateBuffer(&tBufferDesc, &tData, &m_pIdxBuffer), );
+}
+
+void VIBufferCube::Release()
+{
+	VIBuffer::Release();
 }
 
 
